@@ -1,6 +1,6 @@
 
 function test2() {
-    alert('hellllll')
+    alert('test')
 }
 
 test2();
