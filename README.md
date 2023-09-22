@@ -1,1 +1,1 @@
-# paladins-skin-randomizer
+Paladins skin randomizer
