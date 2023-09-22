@@ -29,7 +29,7 @@ enum Champions {
     Lian = "Lian",
     Lillith = "Lillith",
     Maeve = "Maeve",
-    Makoa = Makoa,
+    Makoa = "Makoa",
     MalDamba = "Mal'Damba",
     Moji = "Moji",
     Nyx = "Nyx",
@@ -58,11 +58,6 @@ enum Champions {
     Yagorath = "Yagorath",
     Ying = "Ying",
     Zhin = "Zhin"
-
-
-
-
-
 }
 
 enum SkinType {
@@ -96,6 +91,7 @@ type Skin = {
     name: string;
     champion: Champions;
     fileName?: string;
+    releaseDate?: Date;
     type: SkinType;
     availability: Availability,
     rarity: Rarity
@@ -107,154 +103,182 @@ const skins: Array<Skin> = [
         name: "Default",
         type: SkinType.default,
         rarity: Rarity.common,
-        availability: Availability.standard
-        
+        availability: Availability.standard,
+        releaseDate: new Date(2016, 3, 11)
     },
     {
         champion: Champions.Androxus,
         name: "Obsidian",
         type: SkinType.obsidian,
         rarity: Rarity.rare,
-        availability: Availability.mastery
+        availability: Availability.mastery,
+        releaseDate: new Date(2017, 6, 28)
     },
     {
         champion: Champions.Androxus,
         name: "Cosmic",
         type: SkinType.cosmic,
         rarity: Rarity.epic,
-        availability: Availability.mastery
+        availability: Availability.mastery,
+        releaseDate: new Date(2017, 6, 28)
     },
     {
         champion: Champions.Androxus,
         name: "Golden",
         type: SkinType.golden,
         rarity: Rarity.legendary,
-        availability: Availability.mastery
+        availability: Availability.mastery,
+        releaseDate: new Date(2019, 5, 22)
     },
     {
         champion: Champions.Androxus,
         name: "Wraith",
         type: SkinType.recolor,
         rarity: Rarity.common,
-        availability: Availability.standard
+        availability: Availability.standard,
+        releaseDate: new Date(2016, 9, 12)
     },
     {
         champion: Champions.Androxus,
         name: "Exalted",
         type: SkinType.recolor,
         rarity: Rarity.rare,
-        availability: Availability.standard
+        availability: Availability.standard,
+        releaseDate: new Date(2017, 3, 9)
     },
     {
         champion: Champions.Androxus,
         name: "Imperator",
         type: SkinType.recolor,
         rarity: Rarity.rare,
-        availability: Availability.exclusive
+        availability: Availability.exclusive,
+        releaseDate: new Date(2017, 12, 18)
     },
     {
         champion: Champions.Androxus,
         name: "X",
         type: SkinType.special,
         rarity: Rarity.rare,
-        availability: Availability.exclusive
+        availability: Availability.exclusive,
+        releaseDate: new Date(2017, 1, 16)
     },
     {
         champion: Champions.Androxus,
         name: "Stage 4",
         type: SkinType.special,
         rarity: Rarity.rare,
-        availability: Availability.exclusive
+        availability: Availability.exclusive,
+        releaseDate: new Date(2017, 1, 16)
     },
     {
         champion: Champions.Androxus,
         name: "Dasher's Antlers",
         type: SkinType.hat,
         rarity: Rarity.rare,
-        availability: Availability.exclusive
+        availability: Availability.exclusive,
+        releaseDate: new Date(2016, 12, 7)
     },
     {
         champion: Champions.Androxus,
         name: "Screech",
         type: SkinType.hat,
         rarity: Rarity.rare,
-        availability: Availability.exclusive
+        availability: Availability.exclusive,
+        releaseDate: new Date(2017, 10, 4)
     },
     {
         champion: Champions.Androxus,
         name: "Cangaceiro",
         type: SkinType.hat,
         rarity: Rarity.rare,
-        availability: Availability.exclusive
+        availability: Availability.exclusive,
+        releaseDate: new Date(2017, 11, 8)
     },
     {
         champion: Champions.Androxus,
         name: "Huntsman",
         type: SkinType.other,
         rarity: Rarity.epic,
-        availability: Availability.exclusive
+        availability: Availability.exclusive,
+        releaseDate: new Date(2018, 4, 26)
     },
     {
         champion: Champions.Androxus,
         name: "Steam Demon",
         type: SkinType.other,
         rarity: Rarity.epic,
-        availability: Availability.exclusive
+        availability: Availability.exclusive,
+        releaseDate: new Date(2017, 6, 28)
     },
     {
         champion: Champions.Androxus,
         name: "Fallen",
         type: SkinType.other,
         rarity: Rarity.epic,
-        availability: Availability.exclusive
+        availability: Availability.exclusive,
+        releaseDate: new Date(2018, 6, 6)
     },
     {
         champion: Champions.Androxus,
         name: "Battlesuit Godslayer",
         type: SkinType.other,
         rarity: Rarity.epic,
-        availability: Availability.exclusive
+        availability: Availability.exclusive,
+        releaseDate: new Date(2019, 1, 16)
     },
     {
         champion: Champions.Androxus,
         name: "Steel Forged",
         type: SkinType.other,
         rarity: Rarity.epic,
-        availability: Availability.exclusive
+        availability: Availability.exclusive,
+        releaseDate: new Date(2019, 5, 22)
     },
     {
         champion: Champions.Androxus,
         name: "Dragon Forged",
         type: SkinType.other,
         rarity: Rarity.epic,
-        availability: Availability.limited
+        availability: Availability.limited,
+        releaseDate: new Date(2019, 5, 22)
     },
     {
         champion: Champions.Androxus,
         name: "Avatar",
         type: SkinType.other,
         rarity: Rarity.epic,
-        availability: Availability.exclusive
+        availability: Availability.exclusive,
+        releaseDate: new Date(2021, 3, 31)
     },
     {
         champion: Champions.Androxus,
         name: "Modded",
         type: SkinType.other,
         rarity: Rarity.epic,
-        availability: Availability.exclusive
+        availability: Availability.exclusive,
+        releaseDate: new Date(2021, 3, 31)
     },
     {
         champion: Champions.Androxus,
         name: "Eliminate",
         type: SkinType.other,
         rarity: Rarity.epic,
-        availability: Availability.exclusive
+        availability: Availability.exclusive,
+        releaseDate: new Date(2019, 5, 22)
     },
     {
         champion: Champions.Androxus,  //CHECK
         name: "Grave Danger",
         type: SkinType.other,
         rarity: Rarity.epic,
+        availability: Availability.exclusive,
+        releaseDate: new Date(2022, 10, 12)
+    },
+    {
+        champion: Champions.Androxus,  //CHECK
+        name: "Anniversary",
+        type: SkinType.other,
+        rarity: Rarity.epic,
         availability: Availability.exclusive
     },
     {
@@ -262,154 +286,176 @@ const skins: Array<Skin> = [
         name: "Default",
         type: SkinType.default,
         rarity: Rarity.common,
-        availability: Availability.standard
+        availability: Availability.standard,
+        releaseDate: new Date(2017, 6, 1)
     },
     {
         champion: Champions.Ash,
         name: "Golden",
         type: SkinType.golden,
         rarity: Rarity.legendary,
-        availability: Availability.mastery
+        availability: Availability.mastery,
+        releaseDate: new Date(2018, 11, 14)
     },
     {
         champion: Champions.Ash,
         name: "Hellion",
         type: SkinType.recolor,
         rarity: Rarity.uncommon,
-        availability: Availability.standard
+        availability: Availability.standard,
+        releaseDate: new Date(2017, 6, 1)
     },
     {
         champion: Champions.Ash,
         name: "Heirloom Crest",
         type: SkinType.hat,
         rarity: Rarity.rare,
-        availability: Availability.exclusive
+        availability: Availability.exclusive,
+        releaseDate: new Date(2018, 1, 10)
     },
     {
         champion: Champions.Ash,
         name: "Ronin",
         type: SkinType.other,
         rarity: Rarity.epic,
-        availability: Availability.exclusive
+        availability: Availability.exclusive,
+        releaseDate: new Date(2017, 8, 9)
     },
     {
         champion: Champions.Ash,
         name: "Xeno-Buster",
         type: SkinType.other,
         rarity: Rarity.epic,
-        availability: Availability.standard
+        availability: Availability.standard,
+        releaseDate: new Date(2018, 9, 11)
     },
     {
         champion: Champions.Ash,
         name: "Street Style",
         type: SkinType.other,
         rarity: Rarity.epic,
-        availability: Availability.exclusive
+        availability: Availability.exclusive,
+        releaseDate: new Date(2019, 4, 1)
     },
     {
         champion: Champions.Ash,
         name: "Ska'drin",
         type: SkinType.other,
         rarity: Rarity.epic,
-        availability: Availability.exclusive
+        availability: Availability.exclusive,
+        releaseDate: new Date(2020, 1, 8)
     },
     {
         champion: Champions.Ash,
         name: "Scorned",
         type: SkinType.other,
         rarity: Rarity.epic,
-        availability: Availability.exclusive
+        availability: Availability.exclusive,
+        releaseDate: new Date(2020, 1, 8)
     },
     {
         champion: Champions.Ash,
         name: "Draconian Huntress",
         type: SkinType.other,
         rarity: Rarity.rare,
-        availability: Availability.exclusive
+        availability: Availability.exclusive,
+        releaseDate: new Date(2022, 11, 17)
     },
     {
         champion: Champions.Atlas,
         name: "Default",
         type: SkinType.default,
         rarity: Rarity.common,
-        availability: Availability.standard
+        availability: Availability.standard,
+        releaseDate: new Date(2019, 3, 27)
     },
     {
         champion: Champions.Atlas,
         name: "Golden",
         type: SkinType.golden,
         rarity: Rarity.legendary,
-        availability: Availability.mastery
+        availability: Availability.mastery,
+        releaseDate: new Date(2019, 3, 27)
     },
     {
         champion: Champions.Atlas,
         name: "Chronomancer",
         type: SkinType.recolor,
         rarity: Rarity.uncommon,
-        availability: Availability.standard
+        availability: Availability.standard,
+        releaseDate: new Date(2019, 3, 27)
     },
     {
         champion: Champions.Atlas,
         name: "Last Hope",
         type: SkinType.recolor,
         rarity: Rarity.rare,
-        availability: Availability.limited
+        availability: Availability.limited,
+        releaseDate: new Date(2019, 3, 27)
     },
     {
         champion: Champions.Atlas,
         name: "Legionnaire",
         type: SkinType.other,
         rarity: Rarity.epic,
-        availability: Availability.exclusive
+        availability: Availability.exclusive,
+        releaseDate: new Date(2019, 4, 24)
     },
     {
         champion: Champions.Atlas,
         name: "Corrupted",
         type: SkinType.other,
         rarity: Rarity.epic,
-        availability: Availability.exclusive
+        availability: Availability.exclusive,
+        releaseDate: new Date(2022, 5, 11)
     },
     {
         champion: Champions.Atlas,
         name: "Vile",
         type: SkinType.other,
         rarity: Rarity.epic,
-        availability: Availability.exclusive
+        availability: Availability.exclusive,
+        releaseDate: new Date(2022, 5, 11)
     },
     {
         champion: Champions.Azaan,
         name: "Default",
         type: SkinType.default,
         rarity: Rarity.common,
-        availability: Availability.standard
+        availability: Availability.standard,
+        releaseDate: new Date(2021, 11, 10)
     },
     {
         champion: Champions.Azaan,
         name: "Golden",
         type: SkinType.golden,
         rarity: Rarity.legendary,
-        availability: Availability.mastery
+        availability: Availability.mastery,
+        releaseDate: new Date(2021, 11, 10)
     },
     {
         champion: Champions.Azaan,
         name: "Kingdom's End",
         type: SkinType.recolor,
         rarity: Rarity.rare,
-        availability: Availability.standard
+        availability: Availability.standard,
+        releaseDate: new Date(2021, 11, 10)
     },
     {
         champion: Champions.Azaan,
         name: "Forgemaster",
         type: SkinType.recolor,
         rarity: Rarity.rare,
-        availability: Availability.limited
+        availability: Availability.limited,
+        releaseDate: new Date(2021, 11, 10)
     },
     {
         champion: Champions.Azaan,
         name: "Dark Drake",
         type: SkinType.other,
         rarity: Rarity.epic,
-        availability: Availability.exclusive
+        availability: Availability.exclusive,
+        releaseDate: new Date(2022, 1, 26)
     },
     {
         champion: Champions.Barik,
@@ -1157,7 +1203,7 @@ const skins: Array<Skin> = [
         name: "Sweet Shop",
         type: SkinType.other,
         rarity: Rarity.epic,
-        availability: Availability.exclusive
+        availability: Availability.limited
     },
     {
         champion: Champions.Evie,
@@ -2363,21 +2409,2141 @@ const skins: Array<Skin> = [
         rarity: Rarity.epic,
         availability: Availability.exclusive
     },
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    {
+        champion: Champions.Lillith,
+        name: "Default",
+        type: SkinType.default,
+        rarity: Rarity.common,
+        availability: Availability.standard
+    },
+    {
+        champion: Champions.Lillith,
+        name: "Golden",
+        type: SkinType.golden,
+        rarity: Rarity.legendary,
+        availability: Availability.mastery
+    },
+    {
+        champion: Champions.Lillith,
+        name: "Wicked Hex",
+        type: SkinType.recolor,
+        rarity: Rarity.epic,
+        availability: Availability.exclusive
+    },
+    {
+        champion: Champions.Lillith,
+        name: "Sun Born",
+        type: SkinType.recolor,
+        rarity: Rarity.rare,
+        availability: Availability.limited
+    },
+    {
+        champion: Champions.Lillith,
+        name: "Stellar Witch",
+        type: SkinType.other,
+        rarity: Rarity.epic,
+        availability: Availability.exclusive
+    },
+    {
+        champion: Champions.Lillith,
+        name: "Heartless Pharaoh",
+        type: SkinType.other,
+        rarity: Rarity.epic,
+        availability: Availability.exclusive
+    },
+    {
+        champion: Champions.Lillith,
+        name: "Weaver Reborn",
+        type: SkinType.other,
+        rarity: Rarity.epic,
+        availability: Availability.exclusive
+    },
+    {
+        champion: Champions.Maeve,
+        name: "Default",
+        type: SkinType.default,
+        rarity: Rarity.common,
+        availability: Availability.standard
+    },
+    {
+        champion: Champions.Maeve,
+        name: "Obsidian",
+        type: SkinType.obsidian,
+        rarity: Rarity.rare,
+        availability: Availability.mastery
+    },
+    {
+        champion: Champions.Maeve,
+        name: "Cosmic",
+        type: SkinType.cosmic,
+        rarity: Rarity.epic,
+        availability: Availability.mastery
+    },
+    {
+        champion: Champions.Maeve,
+        name: "Golden",
+        type: SkinType.golden,
+        rarity: Rarity.legendary,
+        availability: Availability.mastery
+    },
+    {
+        champion: Champions.Maeve,
+        name: "Vagrant",
+        type: SkinType.recolor,
+        rarity: Rarity.common,
+        availability: Availability.standard
+    },
+    {
+        champion: Champions.Maeve,
+        name: "Alley Cat",
+        type: SkinType.recolor,
+        rarity: Rarity.rare,
+        availability: Availability.standard
+    },
+    {
+        champion: Champions.Maeve,
+        name: "Dreamhack",
+        type: SkinType.special,
+        rarity: Rarity.rare,
+        availability: Availability.exclusive
+    },
+    {
+        champion: Champions.Maeve,
+        name: "Strike",
+        type: SkinType.special,
+        rarity: Rarity.rare,
+        availability: Availability.limited
+    },
+    {
+        champion: Champions.Maeve,
+        name: "Demonette",
+        type: SkinType.other,
+        rarity: Rarity.epic,
+        availability: Availability.exclusive
+    },
+    {
+        champion: Champions.Maeve,
+        name: "Street Style",
+        type: SkinType.other,
+        rarity: Rarity.epic,
+        availability: Availability.exclusive
+    },
+    {
+        champion: Champions.Maeve,
+        name: "Merrymaker",
+        type: SkinType.other,
+        rarity: Rarity.epic,
+        availability: Availability.unlimited
+    },
+    {
+        champion: Champions.Maeve,
+        name: "Raeve",
+        type: SkinType.other,
+        rarity: Rarity.legendary,
+        availability: Availability.exclusive
+    },
+    {
+        champion: Champions.Maeve,
+        name: "Pirate's Treasure",
+        type: SkinType.other,
+        rarity: Rarity.epic,
+        availability: Availability.exclusive
+    },
+    {
+        champion: Champions.Maeve,
+        name: "Eight Oceans",
+        type: SkinType.other,
+        rarity: Rarity.epic,
+        availability: Availability.limited
+    },
+    {
+        champion: Champions.Maeve,
+        name: "Emerald Bandit",
+        type: SkinType.other,
+        rarity: Rarity.epic,
+        availability: Availability.exclusive
+    },
+    {
+        champion: Champions.Maeve,
+        name: "Temple Raider",
+        type: SkinType.other,
+        rarity: Rarity.epic,
+        availability: Availability.limited
+    },
+    {
+        champion: Champions.Maeve,
+        name: "Cammie",
+        type: SkinType.other,
+        rarity: Rarity.legendary,
+        availability: Availability.exclusive
+    },
+    {
+        champion: Champions.Maeve,
+        name: "Schoolyard",
+        type: SkinType.other,
+        rarity: Rarity.epic,
+        availability: Availability.exclusive
+    },
+    {
+        champion: Champions.Maeve,
+        name: "Study Hall",
+        type: SkinType.other,
+        rarity: Rarity.epic,
+        availability: Availability.exclusive
+    },
+    {
+        champion: Champions.Maeve, //CHECK
+        name: "Anniversary",
+        type: SkinType.other,
+        rarity: Rarity.epic,
+        availability: Availability.exclusive
+    },
+    {
+        champion: Champions.Makoa,
+        name: "Default",
+        type: SkinType.default,
+        rarity: Rarity.common,
+        availability: Availability.standard
+    },
+    {
+        champion: Champions.Makoa,
+        name: "Obsidian",
+        type: SkinType.obsidian,
+        rarity: Rarity.rare,
+        availability: Availability.mastery
+    },
+    {
+        champion: Champions.Makoa,
+        name: "Cosmic",
+        type: SkinType.cosmic,
+        rarity: Rarity.epic,
+        availability: Availability.mastery
+    },
+    {
+        champion: Champions.Makoa,
+        name: "Golden",
+        type: SkinType.golden,
+        rarity: Rarity.legendary,
+        availability: Availability.mastery
+    },
+    {
+        champion: Champions.Makoa,
+        name: "Montego",
+        type: SkinType.recolor,
+        rarity: Rarity.common,
+        availability: Availability.standard
+    },
+    {
+        champion: Champions.Makoa,
+        name: "Barrier Wreath",
+        type: SkinType.hat,
+        rarity: Rarity.rare,
+        availability: Availability.exclusive
+    },
+    {
+        champion: Champions.Makoa,
+        name: "Plushy",
+        type: SkinType.other,
+        rarity: Rarity.epic,
+        availability: Availability.exclusive
+    },
+    {
+        champion: Champions.Makoa,
+        name: "Cuddly",
+        type: SkinType.other,
+        rarity: Rarity.epic,
+        availability: Availability.exclusive
+    },
+    {
+        champion: Champions.Makoa,
+        name: "Volcanic",
+        type: SkinType.other,
+        rarity: Rarity.epic,
+        availability: Availability.limited
+    },
+    {
+        champion: Champions.Makoa,
+        name: "Dutchman",
+        type: SkinType.other,
+        rarity: Rarity.epic,
+        availability: Availability.exclusive
+    },
+    {
+        champion: Champions.Makoa,
+        name: "Prosperous",
+        type: SkinType.other,
+        rarity: Rarity.epic,
+        availability: Availability.exclusive
+    },
+    {
+        champion: Champions.Makoa,
+        name: "Akuma",
+        type: SkinType.other,
+        rarity: Rarity.epic,
+        availability: Availability.exclusive
+    },
+    {
+        champion: Champions.Makoa,
+        name: "Omega",
+        type: SkinType.other,
+        rarity: Rarity.epic,
+        availability: Availability.exclusive
+    },
+    {
+        champion: Champions.MalDamba,
+        name: "Default",
+        type: SkinType.default,
+        rarity: Rarity.common,
+        availability: Availability.standard
+    },
+    {
+        champion: Champions.MalDamba,
+        name: "Obsidian",
+        type: SkinType.obsidian,
+        rarity: Rarity.rare,
+        availability: Availability.mastery
+    },
+    {
+        champion: Champions.MalDamba,
+        name: "Cosmic",
+        type: SkinType.cosmic,
+        rarity: Rarity.epic,
+        availability: Availability.mastery
+    },
+    {
+        champion: Champions.MalDamba,
+        name: "Golden",
+        type: SkinType.golden,
+        rarity: Rarity.legendary,
+        availability: Availability.mastery
+    },
+    {
+        champion: Champions.MalDamba,
+        name: "Cursed",
+        type: SkinType.recolor,
+        rarity: Rarity.common,
+        availability: Availability.standard
+    },
+    {
+        champion: Champions.MalDamba,
+        name: "Defiler",
+        type: SkinType.recolor,
+        rarity: Rarity.rare,
+        availability: Availability.standard
+    },
+    {
+        champion: Champions.MalDamba,
+        name: "Na'Vi",
+        type: SkinType.other,
+        rarity: Rarity.rare,
+        availability: Availability.exclusive
+    },
+    {
+        champion: Champions.MalDamba,
+        name: "Prickly",
+        type: SkinType.hat,
+        rarity: Rarity.rare,
+        availability: Availability.exclusive
+    },
+    {
+        champion: Champions.MalDamba,
+        name: "Chancellor",
+        type: SkinType.other,
+        rarity: Rarity.epic,
+        availability: Availability.exclusive
+    },
+    {
+        champion: Champions.MalDamba,
+        name: "Wickerman",
+        type: SkinType.other,
+        rarity: Rarity.epic,
+        availability: Availability.standard
+    },
+    {
+        champion: Champions.MalDamba,
+        name: "Shadow Lord",
+        type: SkinType.other,
+        rarity: Rarity.epic,
+        availability: Availability.exclusive
+    },
+    {
+        champion: Champions.MalDamba,
+        name: "Steel Forged",
+        type: SkinType.other,
+        rarity: Rarity.epic,
+        availability: Availability.exclusive
+    },
+    {
+        champion: Champions.MalDamba,
+        name: "Dragon Forged",
+        type: SkinType.other,
+        rarity: Rarity.epic,
+        availability: Availability.limited
+    },
+    {
+        champion: Champions.MalDamba,
+        name: "Shiro",
+        type: SkinType.other,
+        rarity: Rarity.epic,
+        availability: Availability.exclusive
+    },
+    {
+        champion: Champions.Moji,
+        name: "Default",
+        type: SkinType.default,
+        rarity: Rarity.common,
+        availability: Availability.standard
+    },
+    {
+        champion: Champions.Moji,
+        name: "Golden",
+        type: SkinType.golden,
+        rarity: Rarity.legendary,
+        availability: Availability.mastery
+    },
+    {
+        champion: Champions.Moji,
+        name: "Plum",
+        type: SkinType.recolor,
+        rarity: Rarity.uncommon,
+        availability: Availability.standard
+    },
+    {
+        champion: Champions.Moji,
+        name: "Dragonborn",
+        type: SkinType.other,
+        rarity: Rarity.epic,
+        availability: Availability.exclusive
+    },
+    {
+        champion: Champions.Moji,
+        name: "Cuddly",
+        type: SkinType.other,
+        rarity: Rarity.epic,
+        availability: Availability.exclusive
+    },
+    {
+        champion: Champions.Moji,
+        name: "PEEKABOO",
+        type: SkinType.other,
+        rarity: Rarity.epic,
+        availability: Availability.exclusive
+    },
+    {
+        champion: Champions.Nyx,
+        name: "Default",
+        type: SkinType.default,
+        rarity: Rarity.common,
+        availability: Availability.standard
+    },
+    {
+        champion: Champions.Nyx,
+        name: "Golden",
+        type: SkinType.golden,
+        rarity: Rarity.legendary,
+        availability: Availability.mastery
+    },
+    {
+        champion: Champions.Nyx,
+        name: "Crimson Queen",
+        type: SkinType.recolor,
+        rarity: Rarity.rare,
+        availability: Availability.exclusive
+    },
+    {
+        champion: Champions.Nyx,
+        name: "Divine Matriarch",
+        type: SkinType.recolor,
+        rarity: Rarity.rare,
+        availability: Availability.exclusive
+    },
+    {
+        champion: Champions.Octavia,
+        name: "Default",
+        type: SkinType.default,
+        rarity: Rarity.common,
+        availability: Availability.standard
+    },
+    {
+        champion: Champions.Octavia,
+        name: "Golden",
+        type: SkinType.golden,
+        rarity: Rarity.legendary,
+        availability: Availability.mastery
+    },
+    {
+        champion: Champions.Octavia,
+        name: "Commander",
+        type: SkinType.recolor,
+        rarity: Rarity.epic,
+        availability: Availability.exclusive
+    },
+    {
+        champion: Champions.Octavia,
+        name: "Maverick",
+        type: SkinType.recolor,
+        rarity: Rarity.epic,
+        availability: Availability.limited
+    },
+    {
+        champion: Champions.Octavia,
+        name: "Beachside",
+        type: SkinType.other,
+        rarity: Rarity.epic,
+        availability: Availability.exclusive
+    },
+    {
+        champion: Champions.Octavia,
+        name: "Freedom Fighter",
+        type: SkinType.other,
+        rarity: Rarity.epic,
+        availability: Availability.exclusive
+    },
+    {
+        champion: Champions.Omen,
+        name: "Default",
+        type: SkinType.default,
+        rarity: Rarity.common,
+        availability: Availability.standard
+    },
+    {
+        champion: Champions.Omen,
+        name: "Golden",
+        type: SkinType.golden,
+        rarity: Rarity.legendary,
+        availability: Availability.mastery
+    },
+    {
+        champion: Champions.Omen, //CHECK
+        name: "Recolor1",
+        type: SkinType.recolor,
+        rarity: Rarity.common,
+        availability: Availability.standard
+    },
+    {
+        champion: Champions.Omen,
+        name: "Recolor2",
+        type: SkinType.recolor,
+        rarity: Rarity.common,
+        availability: Availability.standard
+    },
+    {
+        champion: Champions.Pip,
+        name: "Default",
+        type: SkinType.default,
+        rarity: Rarity.common,
+        availability: Availability.standard
+    },
+    {
+        champion: Champions.Pip,
+        name: "Obsidian",
+        type: SkinType.obsidian,
+        rarity: Rarity.rare,
+        availability: Availability.mastery
+    },
+    {
+        champion: Champions.Pip,
+        name: "Cosmic",
+        type: SkinType.cosmic,
+        rarity: Rarity.epic,
+        availability: Availability.mastery
+    },
+    {
+        champion: Champions.Pip,
+        name: "Golden",
+        type: SkinType.golden,
+        rarity: Rarity.legendary,
+        availability: Availability.mastery
+    },
+    {
+        champion: Champions.Pip,
+        name: "Sulfur",
+        type: SkinType.recolor,
+        rarity: Rarity.common,
+        availability: Availability.standard
+    },
+    {
+        champion: Champions.Pip,
+        name: "Tactical",
+        type: SkinType.recolor,
+        rarity: Rarity.rare,
+        availability: Availability.standard
+    },
+    {
+        champion: Champions.Pip,
+        name: "Pandamonium",
+        type: SkinType.other,
+        rarity: Rarity.rare,
+        availability: Availability.standard
+    },
+    {
+        champion: Champions.Pip,
+        name: "Raider",
+        type: SkinType.hat,
+        rarity: Rarity.rare,
+        availability: Availability.exclusive
+    },
+    {
+        champion: Champions.Pip,
+        name: "Love Specs",
+        type: SkinType.hat,
+        rarity: Rarity.rare,
+        availability: Availability.exclusive
+    },
+    {
+        champion: Champions.Pip,
+        name: "Arctic",
+        type: SkinType.other,
+        rarity: Rarity.rare,
+        availability: Availability.exclusive
+    },
+    {
+        champion: Champions.Pip,
+        name: "Invader",
+        type: SkinType.other,
+        rarity: Rarity.epic,
+        availability: Availability.standard
+    },
+    {
+        champion: Champions.Pip,
+        name: "Invader",
+        type: SkinType.other,
+        rarity: Rarity.epic,
+        availability: Availability.standard
+    },
+    {
+        champion: Champions.Pip,
+        name: "Mad Scientist",
+        type: SkinType.other,
+        rarity: Rarity.epic,
+        availability: Availability.exclusive
+    },
+    {
+        champion: Champions.Pip,
+        name: "Remix",
+        type: SkinType.other,
+        rarity: Rarity.legendary,
+        availability: Availability.exclusive
+    },
+    {
+        champion: Champions.Pip,
+        name: "Inventor",
+        type: SkinType.other,
+        rarity: Rarity.epic,
+        availability: Availability.limited
+    },
+    {
+        champion: Champions.Raum,
+        name: "Default",
+        type: SkinType.default,
+        rarity: Rarity.common,
+        availability: Availability.standard
+    },
+    {
+        champion: Champions.Raum,
+        name: "Golden",
+        type: SkinType.golden,
+        rarity: Rarity.legendary,
+        availability: Availability.mastery
+    },
+    {
+        champion: Champions.Raum,
+        name: "Subjugator",
+        type: SkinType.recolor,
+        rarity: Rarity.uncommon,
+        availability: Availability.standard
+    },
+    {
+        champion: Champions.Raum,
+        name: "Abyssal Lord",
+        type: SkinType.recolor,
+        rarity: Rarity.rare,
+        availability: Availability.limited
+    },
+    {
+        champion: Champions.Raum,
+        name: "Crypt Guardian",
+        type: SkinType.other,
+        rarity: Rarity.epic,
+        availability: Availability.exclusive
+    },
+    {
+        champion: Champions.Raum,
+        name: "Undead Colossus",
+        type: SkinType.other,
+        rarity: Rarity.epic,
+        availability: Availability.exclusive
+    },
+    {
+        champion: Champions.Raum,
+        name: "Kraumpus",
+        type: SkinType.other,
+        rarity: Rarity.epic,
+        availability: Availability.exclusive
+    },
+    {
+        champion: Champions.Raum,
+        name: "R.O.M.",
+        type: SkinType.other,
+        rarity: Rarity.epic,
+        availability: Availability.exclusive
+    },
+    {
+        champion: Champions.Raum,
+        name: "Heatsink",
+        type: SkinType.other,
+        rarity: Rarity.epic,
+        availability: Availability.exclusive
+    },
+    {
+        champion: Champions.Raum,
+        name: "The Harlequin",
+        type: SkinType.other,
+        rarity: Rarity.epic,
+        availability: Availability.exclusive
+    },
+    {
+        champion: Champions.Raum,
+        name: "Eternal Devilry",
+        type: SkinType.other,
+        rarity: Rarity.epic,
+        availability: Availability.exclusive
+    },
+    {
+        champion: Champions.Rei,
+        name: "Default",
+        type: SkinType.default,
+        rarity: Rarity.common,
+        availability: Availability.standard
+    },
+    {
+        champion: Champions.Rei,
+        name: "Golden",
+        type: SkinType.golden,
+        rarity: Rarity.legendary,
+        availability: Availability.mastery
+    },
+    {
+        champion: Champions.Rei,
+        name: "Harvest",
+        type: SkinType.recolor,
+        rarity: Rarity.uncommon,
+        availability: Availability.standard
+    },
+    {
+        champion: Champions.Rei,
+        name: "Beach Bunny",
+        type: SkinType.recolor,
+        rarity: Rarity.uncommon,
+        availability: Availability.limited
+    },
+    {
+        champion: Champions.Rei,
+        name: "Pumpkin Patch",
+        type: SkinType.other,
+        rarity: Rarity.epic,
+        availability: Availability.exclusive
+    },
+    {
+        champion: Champions.Rei,
+        name: "Class President",
+        type: SkinType.other,
+        rarity: Rarity.epic,
+        availability: Availability.exclusive
+    },
+    {
+        champion: Champions.Rei,
+        name: "Valedictorian",
+        type: SkinType.other,
+        rarity: Rarity.epic,
+        availability: Availability.exclusive
+    },
+    {
+        champion: Champions.Ruckus,
+        name: "Default",
+        type: SkinType.default,
+        rarity: Rarity.common,
+        availability: Availability.standard
+    },
+    {
+        champion: Champions.Ruckus,
+        name: "Golden",
+        type: SkinType.golden,
+        rarity: Rarity.legendary,
+        availability: Availability.mastery
+    },
+    {
+        champion: Champions.Ruckus,
+        name: "Sprocket",
+        type: SkinType.recolor,
+        rarity: Rarity.common,
+        availability: Availability.standard
+    },
+    {
+        champion: Champions.Ruckus,
+        name: "B.E.T.A.",
+        type: SkinType.recolor,
+        rarity: Rarity.rare,
+        availability: Availability.standard
+    },
+    {
+        champion: Champions.Ruckus,
+        name: "H.A.W.K.",
+        type: SkinType.recolor,
+        rarity: Rarity.rare,
+        availability: Availability.standard
+    },
+    {
+        champion: Champions.Ruckus,
+        name: "Lil'Andy",
+        type: SkinType.hat,
+        rarity: Rarity.rare,
+        availability: Availability.exclusive
+    },
+    {
+        champion: Champions.Ruckus,
+        name: "Robo Force",
+        type: SkinType.other,
+        rarity: Rarity.epic,
+        availability: Availability.exclusive
+    },
+    {
+        champion: Champions.Ruckus,
+        name: "Star Slayer",
+        type: SkinType.other,
+        rarity: Rarity.legendary,
+        availability: Availability.standard
+    },
+    {
+        champion: Champions.Ruckus,
+        name: "Pirate's Treasure",
+        type: SkinType.other,
+        rarity: Rarity.epic,
+        availability: Availability.exclusive
+    },
+    {
+        champion: Champions.Ruckus,
+        name: "Eight Oceans",
+        type: SkinType.other,
+        rarity: Rarity.epic,
+        availability: Availability.limited
+    },
+    {
+        champion: Champions.Saati,
+        name: "Default",
+        type: SkinType.default,
+        rarity: Rarity.common,
+        availability: Availability.standard
+    },
+    {
+        champion: Champions.Saati,
+        name: "Golden",
+        type: SkinType.golden,
+        rarity: Rarity.legendary,
+        availability: Availability.mastery
+    },
+    {
+        champion: Champions.Saati,
+        name: "Hot Shot",
+        type: SkinType.recolor,
+        rarity: Rarity.uncommon,
+        availability: Availability.standard
+    },
+    {
+        champion: Champions.Saati,
+        name: "Iced Out",
+        type: SkinType.recolor,
+        rarity: Rarity.epic,
+        availability: Availability.limited
+    },
+    {
+        champion: Champions.Saati,
+        name: "Sea Queen",
+        type: SkinType.other,
+        rarity: Rarity.epic,
+        availability: Availability.exclusive
+    },
+    {
+        champion: Champions.Saati,
+        name: "Crimson Tide",
+        type: SkinType.other,
+        rarity: Rarity.epic,
+        availability: Availability.exclusive
+    },
+    {
+        champion: Champions.Saati,
+        name: "Blake Belladonna",
+        type: SkinType.other,
+        rarity: Rarity.epic,
+        availability: Availability.exclusive
+    },
+    {
+        champion: Champions.Saati,
+        name: "Wings of Darkness",
+        type: SkinType.other,
+        rarity: Rarity.epic,
+        availability: Availability.exclusive
+    },
+    {
+        champion: Champions.Saati,
+        name: "Wings of Carnage",
+        type: SkinType.other,
+        rarity: Rarity.epic,
+        availability: Availability.exclusive
+    },
+    {
+        champion: Champions.Seris,
+        name: "Default",
+        type: SkinType.default,
+        rarity: Rarity.common,
+        availability: Availability.standard
+    },
+    {
+        champion: Champions.Seris,
+        name: "Obsidian",
+        type: SkinType.obsidian,
+        rarity: Rarity.rare,
+        availability: Availability.mastery
+    },
+    {
+        champion: Champions.Seris,
+        name: "Cosmic",
+        type: SkinType.cosmic,
+        rarity: Rarity.epic,
+        availability: Availability.mastery
+    },
+    {
+        champion: Champions.Seris,
+        name: "Golden",
+        type: SkinType.golden,
+        rarity: Rarity.legendary,
+        availability: Availability.mastery
+    },
+    {
+        champion: Champions.Seris,
+        name: "Taboo",
+        type: SkinType.recolor,
+        rarity: Rarity.common,
+        availability: Availability.standard
+    },
+    {
+        champion: Champions.Seris,
+        name: "Parasite",
+        type: SkinType.hat,
+        rarity: Rarity.rare,
+        availability: Availability.exclusive
+    },
+    {
+        champion: Champions.Seris,
+        name: "Infernal",
+        type: SkinType.other,
+        rarity: Rarity.epic,
+        availability: Availability.standard
+    },
+    {
+        champion: Champions.Seris,
+        name: "Divine",
+        type: SkinType.other,
+        rarity: Rarity.epic,
+        availability: Availability.exclusive
+    },
+    {
+        champion: Champions.Seris,
+        name: "Madame",
+        type: SkinType.other,
+        rarity: Rarity.epic,
+        availability: Availability.exclusive
+    },
+    {
+        champion: Champions.Seris,
+        name: "Jade Priestess",
+        type: SkinType.other,
+        rarity: Rarity.epic,
+        availability: Availability.exclusive
+    },
+    {
+        champion: Champions.Seris,
+        name: "Cottontail",
+        type: SkinType.other,
+        rarity: Rarity.epic,
+        availability: Availability.exclusive
+    },
+    {
+        champion: Champions.Seris,
+        name: "Remix",
+        type: SkinType.other,
+        rarity: Rarity.legendary,
+        availability: Availability.exclusive
+    },
+    {
+        champion: Champions.Seris,
+        name: "Stellar Mender",
+        type: SkinType.other,
+        rarity: Rarity.epic,
+        availability: Availability.exclusive
+    },
+    {
+        champion: Champions.Seris,
+        name: "Salem",
+        type: SkinType.other,
+        rarity: Rarity.epic,
+        availability: Availability.exclusive
+    },
+    {
+        champion: Champions.Seris,
+        name: "Doom Bringer",
+        type: SkinType.other,
+        rarity: Rarity.epic,
+        availability: Availability.exclusive
+    },
+    {
+        champion: Champions.Seris,
+        name: "Flame Bringer",
+        type: SkinType.other,
+        rarity: Rarity.epic,
+        availability: Availability.exclusive
+    },
+    {
+        champion: Champions.Seris, //CHECK
+        name: "Anniversary",
+        type: SkinType.other,
+        rarity: Rarity.epic,
+        availability: Availability.exclusive
+    },
+    {
+        champion: Champions.ShaLin,
+        name: "Default",
+        type: SkinType.default,
+        rarity: Rarity.common,
+        availability: Availability.standard
+    },
+    {
+        champion: Champions.ShaLin,
+        name: "Golden",
+        type: SkinType.golden,
+        rarity: Rarity.legendary,
+        availability: Availability.mastery
+    },
+    {
+        champion: Champions.ShaLin,
+        name: "Bravado",
+        type: SkinType.recolor,
+        rarity: Rarity.common,
+        availability: Availability.standard
+    },
+    {
+        champion: Champions.ShaLin,
+        name: "Burrito",
+        type: SkinType.recolor,
+        rarity: Rarity.rare,
+        availability: Availability.limited
+    },
+    {
+        champion: Champions.ShaLin,
+        name: "In the Bag",
+        type: SkinType.hat,
+        rarity: Rarity.rare,
+        availability: Availability.exclusive
+    },
+    {
+        champion: Champions.ShaLin,
+        name: "Vigilante",
+        type: SkinType.other,
+        rarity: Rarity.epic,
+        availability: Availability.standard
+    },
+    {
+        champion: Champions.ShaLin,
+        name: "Guardian",
+        type: SkinType.other,
+        rarity: Rarity.epic,
+        availability: Availability.standard
+    },
+    {
+        champion: Champions.ShaLin,
+        name: "Crime Fighter",
+        type: SkinType.other,
+        rarity: Rarity.epic,
+        availability: Availability.exclusive
+    },
+    {
+        champion: Champions.ShaLin,
+        name: "Outlaw",
+        type: SkinType.other,
+        rarity: Rarity.epic,
+        availability: Availability.standard
+    },
+    {
+        champion: Champions.ShaLin,
+        name: "Omega",
+        type: SkinType.other,
+        rarity: Rarity.epic,
+        availability: Availability.exclusive
+    },
+    {
+        champion: Champions.Skye,
+        name: "Default",
+        type: SkinType.default,
+        rarity: Rarity.common,
+        availability: Availability.standard
+    },
+    {
+        champion: Champions.Skye,
+        name: "Obsidian",
+        type: SkinType.obsidian,
+        rarity: Rarity.rare,
+        availability: Availability.mastery
+    },
+    {
+        champion: Champions.Skye,
+        name: "Cosmic",
+        type: SkinType.cosmic,
+        rarity: Rarity.epic,
+        availability: Availability.mastery
+    },
+    {
+        champion: Champions.Skye,
+        name: "Golden",
+        type: SkinType.golden,
+        rarity: Rarity.legendary,
+        availability: Availability.mastery
+    },
+    {
+        champion: Champions.Skye,
+        name: "Guild",
+        type: SkinType.recolor,
+        rarity: Rarity.uncommon,
+        availability: Availability.standard
+    },
+    {
+        champion: Champions.Skye,
+        name: "Pilot Suit",
+        type: SkinType.recolor,
+        rarity: Rarity.uncommon,
+        availability: Availability.standard
+    },
+    {
+        champion: Champions.Skye,
+        name: "Twilight",
+        type: SkinType.recolor,
+        rarity: Rarity.rare,
+        availability: Availability.standard
+    },
+    {
+        champion: Champions.Skye,
+        name: "Operative",
+        type: SkinType.recolor,
+        rarity: Rarity.rare,
+        availability: Availability.standard
+    },
+    {
+        champion: Champions.Skye,
+        name: "Chrome",
+        type: SkinType.other,
+        rarity: Rarity.rare,
+        availability: Availability.standard
+    },
+    {
+        champion: Champions.Skye,
+        name: "Heartbreaker",
+        type: SkinType.other,
+        rarity: Rarity.epic,
+        availability: Availability.exclusive
+    },
+    {
+        champion: Champions.Skye,
+        name: "Kunoichi",
+        type: SkinType.other,
+        rarity: Rarity.epic,
+        availability: Availability.exclusive
+    },
+    {
+        champion: Champions.Skye,
+        name: "Academic",
+        type: SkinType.other,
+        rarity: Rarity.epic,
+        availability: Availability.exclusive
+    },
+    {
+        champion: Champions.Skye,
+        name: "Street Style",
+        type: SkinType.other,
+        rarity: Rarity.epic,
+        availability: Availability.exclusive
+    },
+    {
+        champion: Champions.Skye,
+        name: "Temptress",
+        type: SkinType.other,
+        rarity: Rarity.epic,
+        availability: Availability.exclusive
+    },
+    {
+        champion: Champions.Skye,
+        name: "Devilish",
+        type: SkinType.other,
+        rarity: Rarity.epic,
+        availability: Availability.exclusive
+    },
+    {
+        champion: Champions.Skye,
+        name: "GG Magree",
+        type: SkinType.other,
+        rarity: Rarity.epic,
+        availability: Availability.exclusive
+    },
+    {
+        champion: Champions.Skye,
+        name: "VIP GG Magree",
+        type: SkinType.other,
+        rarity: Rarity.epic,
+        availability: Availability.exclusive
+    },
+    {
+        champion: Champions.Strix,
+        name: "Default",
+        type: SkinType.default,
+        rarity: Rarity.common,
+        availability: Availability.standard
+    },
+    {
+        champion: Champions.Strix,
+        name: "Golden",
+        type: SkinType.golden,
+        rarity: Rarity.legendary,
+        availability: Availability.mastery
+    },
+    {
+        champion: Champions.Strix,
+        name: "Phoenix",
+        type: SkinType.recolor,
+        rarity: Rarity.uncommon,
+        availability: Availability.standard
+    },
+    {
+        champion: Champions.Strix,
+        name: "Raven",
+        type: SkinType.recolor,
+        rarity: Rarity.rare,
+        availability: Availability.standard
+    },
+    {
+        champion: Champions.Strix,
+        name: "Coldsnap",
+        type: SkinType.special,
+        rarity: Rarity.rare,
+        availability: Availability.limited
+    },
+    {
+        champion: Champions.Strix,
+        name: "Bad Mother Clucker",
+        type: SkinType.hat,
+        rarity: Rarity.rare,
+        availability: Availability.exclusive
+    },
+    {
+        champion: Champions.Strix,
+        name: "Switch",
+        type: SkinType.special,
+        rarity: Rarity.epic,
+        availability: Availability.exclusive
+    },
+    {
+        champion: Champions.Strix,
+        name: "Infiltrator",
+        type: SkinType.other,
+        rarity: Rarity.epic,
+        availability: Availability.exclusive
+    },
+    {
+        champion: Champions.Strix,
+        name: "Mercenary",
+        type: SkinType.other,
+        rarity: Rarity.epic,
+        availability: Availability.exclusive
+    },
+    {
+        champion: Champions.Strix,
+        name: "Remix",
+        type: SkinType.other,
+        rarity: Rarity.legendary,
+        availability: Availability.exclusive
+    },
+    {
+        champion: Champions.Strix,
+        name: "Redux",
+        type: SkinType.other,
+        rarity: Rarity.legendary,
+        availability: Availability.limited
+    },
+    {
+        champion: Champions.Strix,
+        name: "Hustler",
+        type: SkinType.other,
+        rarity: Rarity.epic,
+        availability: Availability.exclusive
+    },
+    {
+        champion: Champions.Strix,
+        name: "Swindler",
+        type: SkinType.other,
+        rarity: Rarity.epic,
+        availability: Availability.limited
+    },
+    {
+        champion: Champions.Strix,
+        name: "Scalebane",
+        type: SkinType.other,
+        rarity: Rarity.epic,
+        availability: Availability.exclusive
+    },
+    {
+        champion: Champions.Strix,
+        name: "Dragonsbane",
+        type: SkinType.other,
+        rarity: Rarity.epic,
+        availability: Availability.exclusive
+    },
+    {
+        champion: Champions.Talus,
+        name: "Default",
+        type: SkinType.default,
+        rarity: Rarity.common,
+        availability: Availability.standard
+    },
+    {
+        champion: Champions.Talus,
+        name: "Golden",
+        type: SkinType.golden,
+        rarity: Rarity.legendary,
+        availability: Availability.mastery
+    },
+    {
+        champion: Champions.Talus,
+        name: "Geist",
+        type: SkinType.recolor,
+        rarity: Rarity.uncommon,
+        availability: Availability.standard
+    },
+    {
+        champion: Champions.Talus,
+        name: "Oni",
+        type: SkinType.other,
+        rarity: Rarity.epic,
+        availability: Availability.exclusive
+    },
+    {
+        champion: Champions.Talus,
+        name: "Trick or Treat",
+        type: SkinType.other,
+        rarity: Rarity.epic,
+        availability: Availability.exclusive
+    },
+    {
+        champion: Champions.Talus,
+        name: "Wukong",
+        type: SkinType.other,
+        rarity: Rarity.epic,
+        availability: Availability.exclusive
+    },
+    {
+        champion: Champions.Talus,
+        name: "Monkey-King",
+        type: SkinType.other,
+        rarity: Rarity.epic,
+        availability: Availability.exclusive
+    },
+    {
+        champion: Champions.Terminus,
+        name: "Default",
+        type: SkinType.default,
+        rarity: Rarity.common,
+        availability: Availability.standard
+    },
+    {
+        champion: Champions.Terminus,
+        name: "Golden",
+        type: SkinType.golden,
+        rarity: Rarity.legendary,
+        availability: Availability.mastery
+    },
+    {
+        champion: Champions.Terminus,
+        name: "Monolith",
+        type: SkinType.recolor,
+        rarity: Rarity.uncommon,
+        availability: Availability.standard
+    },
+    {
+        champion: Champions.Terminus,
+        name: "Jotunn",
+        type: SkinType.other,
+        rarity: Rarity.epic,
+        availability: Availability.exclusive
+    },
+    {
+        champion: Champions.Terminus,
+        name: "Abominable",
+        type: SkinType.other,
+        rarity: Rarity.epic,
+        availability: Availability.exclusive
+    },
+    {
+        champion: Champions.Terminus,
+        name: "Omega",
+        type: SkinType.other,
+        rarity: Rarity.epic,
+        availability: Availability.exclusive
+    },
+    {
+        champion: Champions.Terminus,
+        name: "Steel Forged",
+        type: SkinType.other,
+        rarity: Rarity.epic,
+        availability: Availability.exclusive
+    },
+    {
+        champion: Champions.Terminus,
+        name: "Cosmic Titan",
+        type: SkinType.other,
+        rarity: Rarity.epic,
+        availability: Availability.exclusive
+    },
+    {
+        champion: Champions.Terminus,
+        name: "Super Nova",
+        type: SkinType.other,
+        rarity: Rarity.epic,
+        availability: Availability.exclusive
+    },
+    {
+        champion: Champions.Tiberius,
+        name: "Default",
+        type: SkinType.default,
+        rarity: Rarity.common,
+        availability: Availability.standard
+    },
+    {
+        champion: Champions.Tiberius,
+        name: "Golden",
+        type: SkinType.golden,
+        rarity: Rarity.legendary,
+        availability: Availability.mastery
+    },
+    {
+        champion: Champions.Tiberius,
+        name: "Beast Slayer",
+        type: SkinType.recolor,
+        rarity: Rarity.epic,
+        availability: Availability.exclusive
+    },
+    {
+        champion: Champions.Tiberius,
+        name: "Nightstalker",
+        type: SkinType.recolor,
+        rarity: Rarity.rare,
+        availability: Availability.limited
+    },
+    {
+        champion: Champions.Tiberius,
+        name: "Tomb Keeper",
+        type: SkinType.other,
+        rarity: Rarity.epic,
+        availability: Availability.unlimited
+    },
+    {
+        champion: Champions.Tiberius,
+        name: "Sphinx Soldier",
+        type: SkinType.other,
+        rarity: Rarity.epic,
+        availability: Availability.exclusive
+    },
+    {
+        champion: Champions.Tiberius,
+        name: "Lifeguard",
+        type: SkinType.other,
+        rarity: Rarity.epic,
+        availability: Availability.exclusive
+    },
+    {
+        champion: Champions.Tiberius,
+        name: "Aka Oni",
+        type: SkinType.other,
+        rarity: Rarity.epic,
+        availability: Availability.exclusive
+    },
+    {
+        champion: Champions.Tiberius,
+        name: "Aoi Oni",
+        type: SkinType.other,
+        rarity: Rarity.epic,
+        availability: Availability.exclusive
+    },
+    {
+        champion: Champions.Torvald,
+        name: "Default",
+        type: SkinType.default,
+        rarity: Rarity.common,
+        availability: Availability.standard
+    },
+    {
+        champion: Champions.Torvald,
+        name: "Obsidian",
+        type: SkinType.obsidian,
+        rarity: Rarity.rare,
+        availability: Availability.mastery
+    },
+    {
+        champion: Champions.Torvald,
+        name: "Cosmic",
+        type: SkinType.cosmic,
+        rarity: Rarity.epic,
+        availability: Availability.mastery
+    },
+    {
+        champion: Champions.Torvald,
+        name: "Golden",
+        type: SkinType.golden,
+        rarity: Rarity.legendary,
+        availability: Availability.mastery
+    },
+    {
+        champion: Champions.Torvald,
+        name: "Arcanist",
+        type: SkinType.recolor,
+        rarity: Rarity.common,
+        availability: Availability.standard
+    },
+    {
+        champion: Champions.Torvald,
+        name: "Grave-robber's Spoils",
+        type: SkinType.hat,
+        rarity: Rarity.rare,
+        availability: Availability.exclusive
+    },
+    {
+        champion: Champions.Torvald,
+        name: "Clockwork",
+        type: SkinType.other,
+        rarity: Rarity.epic,
+        availability: Availability.exclusive
+    },
+    {
+        champion: Champions.Torvald,
+        name: "Dark Lord",
+        type: SkinType.other,
+        rarity: Rarity.epic,
+        availability: Availability.exclusive
+    },
+    {
+        champion: Champions.Torvald,
+        name: "Berserker",
+        type: SkinType.other,
+        rarity: Rarity.epic,
+        availability: Availability.exclusive
+    },
+    {
+        champion: Champions.Torvald,
+        name: "Revenant",
+        type: SkinType.other,
+        rarity: Rarity.epic,
+        availability: Availability.exclusive
+    },
+    {
+        champion: Champions.Tyra,
+        name: "Default",
+        type: SkinType.default,
+        rarity: Rarity.common,
+        availability: Availability.standard
+    },
+    {
+        champion: Champions.Tyra,
+        name: "Obsidian",
+        type: SkinType.obsidian,
+        rarity: Rarity.rare,
+        availability: Availability.mastery
+    },
+    {
+        champion: Champions.Tyra,
+        name: "Cosmic",
+        type: SkinType.cosmic,
+        rarity: Rarity.epic,
+        availability: Availability.mastery
+    },
+    {
+        champion: Champions.Tyra,
+        name: "Golden",
+        type: SkinType.golden,
+        rarity: Rarity.legendary,
+        availability: Availability.mastery
+    },
+    {
+        champion: Champions.Tyra,
+        name: "Alluvial",
+        type: SkinType.recolor,
+        rarity: Rarity.common,
+        availability: Availability.standard
+    },
+    {
+        champion: Champions.Tyra,
+        name: "Baroness",
+        type: SkinType.recolor,
+        rarity: Rarity.rare,
+        availability: Availability.exclusive
+    },
+    {
+        champion: Champions.Tyra,
+        name: "Lotus",
+        type: SkinType.recolor,
+        rarity: Rarity.rare,
+        availability: Availability.exclusive
+    },
+    {
+        champion: Champions.Tyra,
+        name: "Dire Wolf",
+        type: SkinType.other,
+        rarity: Rarity.epic,
+        availability: Availability.exclusive
+    },
+    {
+        champion: Champions.Tyra,
+        name: "Red Winter",
+        type: SkinType.other,
+        rarity: Rarity.epic,
+        availability: Availability.exclusive
+    },
+    {
+        champion: Champions.Tyra,
+        name: "Red Drakefire",
+        type: SkinType.other,
+        rarity: Rarity.epic,
+        availability: Availability.exclusive
+    },
+    {
+        champion: Champions.Tyra,
+        name: "Archangel",
+        type: SkinType.other,
+        rarity: Rarity.epic,
+        availability: Availability.exclusive
+    },
+    {
+        champion: Champions.Tyra,
+        name: "Heartbreaker",
+        type: SkinType.other,
+        rarity: Rarity.epic,
+        availability: Availability.exclusive
+    },
+    {
+        champion: Champions.Tyra,
+        name: "Gunslinger",
+        type: SkinType.other,
+        rarity: Rarity.epic,
+        availability: Availability.exclusive
+    },
+    {
+        champion: Champions.Tyra,
+        name: "Bandit",
+        type: SkinType.other,
+        rarity: Rarity.epic,
+        availability: Availability.limited
+    },
+    {
+        champion: Champions.Tyra,
+        name: "Firebrand",
+        type: SkinType.other,
+        rarity: Rarity.epic,
+        availability: Availability.exclusive
+    },
+    {
+        champion: Champions.Tyra,
+        name: "Frostbrand",
+        type: SkinType.other,
+        rarity: Rarity.epic,
+        availability: Availability.exclusive
+    },
+    {
+        champion: Champions.Tyra,
+        name: "Marauder",
+        type: SkinType.other,
+        rarity: Rarity.epic,
+        availability: Availability.exclusive
+    },
+    {
+        champion: Champions.Tyra,
+        name: "Royal Mark",
+        type: SkinType.other,
+        rarity: Rarity.epic,
+        availability: Availability.exclusive
+    },
+    {
+        champion: Champions.Tyra,
+        name: "Eternal Emissary",
+        type: SkinType.other,
+        rarity: Rarity.epic,
+        availability: Availability.exclusive
+    },
+    {
+        champion: Champions.Tyra,
+        name: "Deathless Emissary",
+        type: SkinType.other,
+        rarity: Rarity.epic,
+        availability: Availability.exclusive
+    },
+    {
+        champion: Champions.Tyra, //CHECK
+        name: "Beach1",
+        type: SkinType.other,
+        rarity: Rarity.epic,
+        availability: Availability.exclusive
+    },
+    {
+        champion: Champions.Tyra, //CHECK
+        name: "Beach2",
+        type: SkinType.other,
+        rarity: Rarity.epic,
+        availability: Availability.exclusive
+    },
+    {
+        champion: Champions.VII,
+        name: "Default",
+        type: SkinType.default,
+        rarity: Rarity.common,
+        availability: Availability.standard
+    },
+    {
+        champion: Champions.VII,
+        name: "Golden",
+        type: SkinType.golden,
+        rarity: Rarity.legendary,
+        availability: Availability.mastery
+    },
+    {
+        champion: Champions.VII,
+        name: "Crimson Guard",
+        type: SkinType.recolor,
+        rarity: Rarity.epic,
+        availability: Availability.exclusive
+    },
+    {
+        champion: Champions.VII,
+        name: "Ivy Sentinel",
+        type: SkinType.recolor,
+        rarity: Rarity.epic,
+        availability: Availability.exclusive
+    },
+    {
+        champion: Champions.VII,
+        name: "Death Orchid",
+        type: SkinType.recolor,
+        rarity: Rarity.epic,
+        availability: Availability.limited
+    },
+    {
+        champion: Champions.VII,
+        name: "Biting Wind",
+        type: SkinType.recolor,
+        rarity: Rarity.epic,
+        availability: Availability.exclusive
+    },
+    {
+        champion: Champions.VII,
+        name: "Deadly Pallor",
+        type: SkinType.recolor,
+        rarity: Rarity.epic,
+        availability: Availability.limited
+    },
+    {
+        champion: Champions.VII,
+        name: "Pandemonium",
+        type: SkinType.other,
+        rarity: Rarity.epic,
+        availability: Availability.exclusive
+    },
+    {
+        champion: Champions.Vatu,
+        name: "Default",
+        type: SkinType.default,
+        rarity: Rarity.common,
+        availability: Availability.standard
+    },
+    {
+        champion: Champions.Vatu,
+        name: "Golden",
+        type: SkinType.golden,
+        rarity: Rarity.legendary,
+        availability: Availability.mastery
+    },
+    {
+        champion: Champions.Vatu,
+        name: "Sorrow",
+        type: SkinType.recolor,
+        rarity: Rarity.uncommon,
+        availability: Availability.exclusive
+    },
+    {
+        champion: Champions.Vatu,
+        name: "Sorrow",
+        type: SkinType.recolor,
+        rarity: Rarity.uncommon,
+        availability: Availability.exclusive
+    },
+    {
+        champion: Champions.Vatu,
+        name: "Duty",
+        type: SkinType.recolor,
+        rarity: Rarity.rare,
+        availability: Availability.limited
+    },
+    {
+        champion: Champions.Vatu,
+        name: "Mayhem",
+        type: SkinType.other,
+        rarity: Rarity.epic,
+        availability: Availability.exclusive
+    },
+    {
+        champion: Champions.Vatu,
+        name: "Abyss Cultist",
+        type: SkinType.other,
+        rarity: Rarity.rare,
+        availability: Availability.exclusive
+    },
+     {
+        champion: Champions.Viktor,
+        name: "Default",
+        type: SkinType.default,
+        rarity: Rarity.common,
+        availability: Availability.standard,
+        releaseDate: new Date(2016, 6, 30)
+    },
+    {
+        champion: Champions.Viktor,
+        name: "Obsidian",
+        type: SkinType.obsidian,
+        rarity: Rarity.rare,
+        availability: Availability.mastery,
+        releaseDate: new Date(2017, 6, 1)
+    },
+    {
+        champion: Champions.Viktor,
+        name: "Cosmic",
+        type: SkinType.cosmic,
+        rarity: Rarity.epic,
+        availability: Availability.mastery,
+        releaseDate: new Date(2017, 6, 1)
+    },
+    {
+        champion: Champions.Viktor,
+        name: "Golden",
+        type: SkinType.golden,
+        rarity: Rarity.legendary,
+        availability: Availability.mastery,
+        releaseDate: new Date(2022, 8, 17)
+    },
+    {
+        champion: Champions.Viktor,
+        name: "Khaki",
+        type: SkinType.recolor,
+        rarity: Rarity.common,
+        availability: Availability.standard,
+        releaseDate: new Date(2016, 6, 30)
+    },
+    {
+        champion: Champions.Viktor,
+        name: "Ushanka",
+        type: SkinType.hat,
+        rarity: Rarity.rare,
+        availability: Availability.exclusive,
+        releaseDate: new Date(2017, 11, 1)
+    },
+    {
+        champion: Champions.Viktor,
+        name: "Lone Heart Patch",
+        type: SkinType.hat,
+        rarity: Rarity.rare,
+        availability: Availability.exclusive,
+        releaseDate: new Date(2017, 2, 8)
+    },
+    {
+        champion: Champions.Viktor,
+        name: "Charcoal",
+        type: SkinType.recolor,
+        rarity: Rarity.rare,
+        availability: Availability.exclusive,
+        releaseDate: new Date(2016, 7, 14)
+    },
+    {
+        champion: Champions.Viktor,
+        name: "Invitational",
+        type: SkinType.special,
+        rarity: Rarity.rare,
+        availability: Availability.limited,
+        releaseDate: new Date(2016, 12, 20)
+    },
+    {
+        champion: Champions.Viktor,
+        name: "Soldier +",
+        type: SkinType.special,
+        rarity: Rarity.rare,
+        availability: Availability.exclusive,
+        releaseDate: new Date(2017, 5, 3)
+    },
+    {
+        champion: Champions.Viktor,
+        name: "Code Green Trooper",
+        type: SkinType.other,
+        rarity: Rarity.epic,
+        availability: Availability.exclusive,
+        releaseDate: new Date(2017, 1, 25)
+    },
+    {
+        champion: Champions.Viktor,
+        name: "Code Green Grenadier",
+        type: SkinType.other,
+        rarity: Rarity.epic,
+        availability: Availability.exclusive,
+        releaseDate: new Date(2017, 1, 25)
+    },
+    {
+        champion: Champions.Viktor,
+        name: "Code Green Bandolier",
+        type: SkinType.other,
+        rarity: Rarity.epic,
+        availability: Availability.exclusive,
+        releaseDate: new Date(2017, 1, 25)
+    },
+    {
+        champion: Champions.Viktor,
+        name: "Code Green Comms",
+        type: SkinType.other,
+        rarity: Rarity.epic,
+        availability: Availability.exclusive,
+        releaseDate: new Date(2017, 1, 25)
+    },
+    {
+        champion: Champions.Viktor,
+        name: "V1-KTOR",
+        type: SkinType.other,
+        rarity: Rarity.epic,
+        availability: Availability.standard,
+        releaseDate: new Date(2017, 8, 23)
+    },
+    {
+        champion: Champions.Viktor,
+        name: "Reaver",
+        type: SkinType.other,
+        rarity: Rarity.epic,
+        availability: Availability.exclusive,
+        releaseDate: new Date(2018, 2, 21)
+    },
+    {
+        champion: Champions.Viktor,
+        name: "Full Moon",
+        type: SkinType.other,
+        rarity: Rarity.epic,
+        availability: Availability.unlimited,
+        releaseDate: new Date(2018, 9, 27)
+    },
+    {
+        champion: Champions.Viktor,
+        name: "Legionnaire",
+        type: SkinType.other,
+        rarity: Rarity.epic,
+        availability: Availability.limited,
+        releaseDate: new Date(2019, 1, 16)
+    },
+    {
+        champion: Champions.Viktor,
+        name: "Draconic Fighter",
+        type: SkinType.other,
+        rarity: Rarity.epic,
+        availability: Availability.unlimited,
+        releaseDate: new Date(2020, 4, 29)
+    },
+    {
+        champion: Champions.Viktor,
+        name: "Hunter's Bane",
+        type: SkinType.other,
+        rarity: Rarity.epic,
+        availability: Availability.exclusive,
+        releaseDate: new Date(2020, 4, 29)
+    },
+    {
+        champion: Champions.Viktor,
+        name: "Chase",
+        type: SkinType.other,
+        rarity: Rarity.legendary,
+        availability: Availability.exclusive,
+        releaseDate: new Date(2021, 7, 21)
+    },
+    {
+        champion: Champions.Viktor,
+        name: "Rambo",
+        type: SkinType.other,
+        rarity: Rarity.epic,
+        availability: Availability.exclusive,
+        releaseDate: new Date(2022, 2, 11)
+    },
+    {
+        champion: Champions.Viktor, //CHECK
+        name: "Anniverssary",
+        type: SkinType.other,
+        rarity: Rarity.epic,
+        availability: Availability.exclusive,
+        releaseDate: new Date(2022, 2, 11)
+    },
+    {
+        champion: Champions.Vivian,
+        name: "Default",
+        type: SkinType.default,
+        rarity: Rarity.common,
+        availability: Availability.standard,
+        releaseDate: new Date(2017, 11, 15)
+    },
+    {
+        champion: Champions.Vivian,
+        name: "Golden",
+        type: SkinType.golden,
+        rarity: Rarity.legendary,
+        availability: Availability.mastery,
+        releaseDate: new Date(2019, 4, 24)
+    },
+    {
+        champion: Champions.Vivian,
+        name: "Manipulator",
+        type: SkinType.recolor,
+        rarity: Rarity.uncommon,
+        availability: Availability.standard,
+        releaseDate: new Date(2018, 3, 28)
+    },
+    {
+        champion: Champions.Vivian,
+        name: "Silvertongue",
+        type: SkinType.recolor,
+        rarity: Rarity.uncommon,
+        availability: Availability.limited,
+        releaseDate: new Date(2017, 11, 15)
+    },
+    {
+        champion: Champions.Vivian,
+        name: "Full Throttle",
+        type: SkinType.other,
+        rarity: Rarity.epic,
+        availability: Availability.limited,
+        releaseDate: new Date(2018, 3, 28)
+    },
+    {
+        champion: Champions.Vivian,
+        name: "Day Walker",
+        type: SkinType.other,
+        rarity: Rarity.epic,
+        availability: Availability.exclusive,
+        releaseDate: new Date(2018, 9, 27)
+    },
+    {
+        champion: Champions.Vivian,
+        name: "Contessa",
+        type: SkinType.other,
+        rarity: Rarity.epic,
+        availability: Availability.limited,
+        releaseDate: new Date(2018, 9, 27)
+    },
+    {
+        champion: Champions.Vivian,
+        name: "Omega",
+        type: SkinType.other,
+        rarity: Rarity.epic,
+        availability: Availability.exclusive,
+        releaseDate: new Date(2019, 3, 27)
+    },
+    {
+        champion: Champions.Vivian,
+        name: "Student of Magic",
+        type: SkinType.other,
+        rarity: Rarity.epic,
+        availability: Availability.exclusive,
+        releaseDate: new Date(2020, 10, 28)
+    },
+    {
+        champion: Champions.Vivian,
+        name: "Novice",
+        type: SkinType.other,
+        rarity: Rarity.epic,
+        availability: Availability.exclusive,
+        releaseDate: new Date(2020, 10, 28)
+    },
+    {
+        champion: Champions.Vivian,
+        name: "Sigma",
+        type: SkinType.other,
+        rarity: Rarity.epic,
+        availability: Availability.exclusive,
+        releaseDate: new Date(2021, 12, 24)
+    },
+    {
+        champion: Champions.Vivian,
+        name: "Retro",
+        type: SkinType.other,
+        rarity: Rarity.epic,
+        availability: Availability.exclusive,
+        releaseDate: new Date(2023, 2, 23)
+    },
+    {
+        champion: Champions.Vora,
+        name: "Default",
+        type: SkinType.default,
+        rarity: Rarity.common,
+        availability: Availability.standard,
+        releaseDate: new Date(2020, 10, 28)
+    },
+    {
+        champion: Champions.Vora,
+        name: "Golden",
+        type: SkinType.golden,
+        rarity: Rarity.legendary,
+        availability: Availability.mastery,
+        releaseDate: new Date(2020, 10, 28)
+    },
+    {
+        champion: Champions.Vora,
+        name: "Herald",
+        type: SkinType.recolor,
+        rarity: Rarity.uncommon,
+        availability: Availability.standard,
+        releaseDate: new Date(2020, 10, 28)
+    },
+    {
+        champion: Champions.Vora,
+        name: "Seal Guardian",
+        type: SkinType.recolor,
+        rarity: Rarity.epic,
+        availability: Availability.limited,
+        releaseDate: new Date(2020, 10, 28)
+    },
+    {
+        champion: Champions.Vora,
+        name: "Honor Guard",
+        type: SkinType.recolor,
+        rarity: Rarity.epic,
+        availability: Availability.exclusive,
+        releaseDate: new Date(2020, 10, 28)
+    },
+    {
+        champion: Champions.Vora,
+        name: "Galactic Conqueror",
+        type: SkinType.other,
+        rarity: Rarity.epic,
+        availability: Availability.exclusive,
+        releaseDate: new Date(2020, 11, 25)
+    },
+    {
+        champion: Champions.Vora,
+        name: "Ruby Rose",
+        type: SkinType.other,
+        rarity: Rarity.epic,
+        availability: Availability.exclusive,
+        releaseDate: new Date(2022, 6, 29)
+    },
     {
         champion: Champions.Vora, // CHECK
         name: "Danse Macabre",
@@ -2392,6 +4558,420 @@ const skins: Array<Skin> = [
         rarity: Rarity.epic,
         availability: Availability.exclusive
     },
-
-
+    {
+        champion: Champions.Willo,
+        name: "Default",
+        type: SkinType.default,
+        rarity: Rarity.common,
+        availability: Availability.standard,
+        releaseDate: new Date(2017, 5, 3)
+    },
+    {
+        champion: Champions.Willo,
+        name: "Obsidian",
+        type: SkinType.obsidian,
+        rarity: Rarity.rare,
+        availability: Availability.mastery,
+        releaseDate: new Date(2017, 6, 28)
+    },
+    {
+        champion: Champions.Willo,
+        name: "Cosmic",
+        type: SkinType.cosmic,
+        rarity: Rarity.epic,
+        availability: Availability.mastery,
+        releaseDate: new Date(2017, 6, 28)
+    },
+    {
+        champion: Champions.Willo,
+        name: "Golden",
+        type: SkinType.golden,
+        rarity: Rarity.legendary,
+        availability: Availability.mastery,
+        releaseDate: new Date(2022, 5, 11)
+    },
+    {
+        champion: Champions.Willo,
+        name: "Bluebell",
+        type: SkinType.recolor,
+        rarity: Rarity.common,
+        availability: Availability.standard,
+        releaseDate: new Date(2017, 5, 3)
+    },
+    {
+        champion: Champions.Willo,
+        name: "Viceroy",
+        type: SkinType.recolor,
+        rarity: Rarity.rare,
+        availability: Availability.standard,
+        releaseDate: new Date(2017, 6, 14)
+    },
+    {
+        champion: Champions.Willo,
+        name: "Jolly Holly",
+        type: SkinType.hat,
+        rarity: Rarity.rare,
+        availability: Availability.exclusive,
+        releaseDate: new Date(2017, 12, 18)
+    },
+    {
+        champion: Champions.Willo,
+        name: "Hemlock",
+        type: SkinType.other,
+        rarity: Rarity.epic,
+        availability: Availability.standard,
+        releaseDate: new Date(2017, 7, 26)
+    },
+    {
+        champion: Champions.Willo,
+        name: "Firecracker",
+        type: SkinType.other,
+        rarity: Rarity.epic,
+        availability: Availability.standard,
+        releaseDate: new Date(2018, 1, 10)
+    },
+    {
+        champion: Champions.Willo,
+        name: "Sugar Plum",
+        type: SkinType.other,
+        rarity: Rarity.epic,
+        availability: Availability.standard,
+        releaseDate: new Date(2018, 12, 10)
+    },
+    {
+        champion: Champions.Willo,
+        name: "Will.0",
+        type: SkinType.other,
+        rarity: Rarity.epic,
+        availability: Availability.limited,
+        releaseDate: new Date(2022, 1, 26)
+    },
+    {
+        champion: Champions.Willo,
+        name: "Yellow Jacket",
+        type: SkinType.other,
+        rarity: Rarity.epic,
+        availability: Availability.exclusive,
+        releaseDate: new Date(2022, 9, 30)
+    },
+    {
+        champion: Champions.Yagorath,
+        name: "Default",
+        type: SkinType.default,
+        rarity: Rarity.common,
+        availability: Availability.standard,
+        releaseDate: new Date(2021, 2, 3)
+    },
+    {
+        champion: Champions.Yagorath,
+        name: "Golden",
+        type: SkinType.golden,
+        rarity: Rarity.legendary,
+        availability: Availability.mastery,
+        releaseDate: new Date(2021, 2, 3)
+    },
+    {
+        champion: Champions.Yagorath,
+        name: "Grave Worm",
+        type: SkinType.recolor,
+        rarity: Rarity.uncommon,
+        availability: Availability.exclusive,
+        releaseDate: new Date(2021, 2, 3)
+    },
+    {
+        champion: Champions.Yagorath,
+        name: "Caustic",
+        type: SkinType.recolor,
+        rarity: Rarity.epic,
+        availability: Availability.limited,
+        releaseDate: new Date(2021, 2, 3)
+    },
+    {
+        champion: Champions.Yagorath,
+        name: "Leviathan",
+        type: SkinType.other,
+        rarity: Rarity.epic,
+        availability: Availability.exclusive,
+        releaseDate: new Date(2021, 11, 10)
+    },
+    {
+        champion: Champions.Yagorath,
+        name: "Cuddly",
+        type: SkinType.other,
+        rarity: Rarity.epic,
+        availability: Availability.exclusive,
+        releaseDate: new Date(2022, 8, 17)
+    },
+    {
+        champion: Champions.Ying,
+        name: "Default",
+        type: SkinType.default,
+        rarity: Rarity.common,
+        availability: Availability.standard,
+        releaseDate: new Date(2016, 4, 7)
+    },
+    {
+        champion: Champions.Ying,
+        name: "Obsidian",
+        type: SkinType.obsidian,
+        rarity: Rarity.rare,
+        availability: Availability.mastery,
+        releaseDate: new Date(2017, 7, 17)
+    },
+    {
+        champion: Champions.Ying,
+        name: "Cosmic",
+        type: SkinType.cosmic,
+        rarity: Rarity.epic,
+        availability: Availability.mastery,
+        releaseDate: new Date(2017, 7, 26)
+    },
+    {
+        champion: Champions.Ying,
+        name: "Golden",
+        type: SkinType.golden,
+        rarity: Rarity.legendary,
+        availability: Availability.mastery,
+        releaseDate: new Date(2021, 5, 26)
+    },
+    {
+        champion: Champions.Ying,
+        name: "Seer",
+        type: SkinType.recolor,
+        rarity: Rarity.common,
+        availability: Availability.standard,
+        releaseDate: new Date(2016, 10, 13)
+    },
+    {
+        champion: Champions.Ying,
+        name: "Snapdragon",
+        type: SkinType.recolor,
+        rarity: Rarity.rare,
+        availability: Availability.standard,
+        releaseDate: new Date(2016, 5, 5)
+    },
+    {
+        champion: Champions.Ying,
+        name: "Quicksilver",
+        type: SkinType.special,
+        rarity: Rarity.rare,
+        availability: Availability.limited,
+        releaseDate: new Date(2017, 6, 14)
+    },
+    {
+        champion: Champions.Ying,
+        name: "Convention 2017",
+        type: SkinType.special,
+        rarity: Rarity.rare,
+        availability: Availability.limited,
+        releaseDate: new Date(2017, 6, 14)
+    },
+    {
+        champion: Champions.Ying,
+        name: "Genie",
+        type: SkinType.other,
+        rarity: Rarity.epic,
+        availability: Availability.exclusive,
+        releaseDate: new Date(2017, 1, 16)
+    },
+    {
+        champion: Champions.Ying,
+        name: "Replicant",
+        type: SkinType.other,
+        rarity: Rarity.epic,
+        availability: Availability.standard,
+        releaseDate: new Date(2017, 6, 14)
+    },
+    {
+        champion: Champions.Ying,
+        name: "Carnival",
+        type: SkinType.other,
+        rarity: Rarity.epic,
+        availability: Availability.standard,
+        releaseDate: new Date(2018, 4, 12)
+    },
+    {
+        champion: Champions.Ying,
+        name: "Death Speaker",
+        type: SkinType.other,
+        rarity: Rarity.epic,
+        availability: Availability.standard,
+        releaseDate: new Date(2018, 9, 27)
+    },
+    {
+        champion: Champions.Ying,
+        name: "Banshee",
+        type: SkinType.other,
+        rarity: Rarity.epic,
+        availability: Availability.limited,
+        releaseDate: new Date(2018, 9, 27)
+    },
+    {
+        champion: Champions.Ying,
+        name: "Street Style",
+        type: SkinType.other,
+        rarity: Rarity.epic,
+        availability: Availability.unlimited,
+        releaseDate: new Date(2019, 4, 24)
+    },
+    {
+        champion: Champions.Ying,
+        name: "Mermaid",
+        type: SkinType.other,
+        rarity: Rarity.epic,
+        availability: Availability.exclusive,
+        releaseDate: new Date(2019, 9, 11)
+    },
+    {
+        champion: Champions.Ying,
+        name: "Siren",
+        type: SkinType.other,
+        rarity: Rarity.epic,
+        availability: Availability.limited,
+        releaseDate: new Date(2019, 9, 11)
+    },
+    {
+        champion: Champions.Ying,
+        name: "Divine Daughter",
+        type: SkinType.other,
+        rarity: Rarity.epic,
+        availability: Availability.exclusive,
+        releaseDate: new Date(2020, 3, 4)
+    },
+    {
+        champion: Champions.Ying,
+        name: "High Priestess",
+        type: SkinType.other,
+        rarity: Rarity.epic,
+        availability: Availability.exclusive,
+        releaseDate: new Date(2020, 3, 4)
+    },
+    {
+        champion: Champions.Ying,
+        name: "Full Dive",
+        type: SkinType.other,
+        rarity: Rarity.epic,
+        availability: Availability.exclusive,
+        releaseDate: new Date(2021, 3, 31)
+    },
+    {
+        champion: Champions.Ying,
+        name: "Rezzed",
+        type: SkinType.other,
+        rarity: Rarity.epic,
+        availability: Availability.exclusive,
+        releaseDate: new Date(2021, 3, 31)
+    },
+    {
+        champion: Champions.Ying,
+        name: "Jurassic",
+        type: SkinType.other,
+        rarity: Rarity.epic,
+        availability: Availability.exclusive,
+        releaseDate: new Date(2022, 1, 26)
+    },
+    {
+        champion: Champions.Ying, //CHECK
+        name: "Anniversarry",
+        type: SkinType.other,
+        rarity: Rarity.epic,
+        availability: Availability.exclusive,
+        releaseDate: new Date(2022, 1, 26)
+    },
+    {
+        champion: Champions.Zhin,
+        name: "Default",
+        type: SkinType.default,
+        rarity: Rarity.common,
+        availability: Availability.standard,
+        releaseDate: new Date(2017, 6, 14)
+    },
+    {
+        champion: Champions.Zhin,
+        name: "Golden",
+        type: SkinType.golden,
+        rarity: Rarity.legendary,
+        availability: Availability.mastery,
+        releaseDate: new Date(2023, 3, 29)
+    },
+    {
+        champion: Champions.Zhin,
+        name: "Nomad",
+        type: SkinType.recolor,
+        rarity: Rarity.uncommon,
+        availability: Availability.standard,
+        releaseDate: new Date(2017, 6, 14)
+    },
+    {
+        champion: Champions.Zhin,
+        name: "Ebon Star",
+        type: SkinType.other,
+        rarity: Rarity.epic,
+        availability: Availability.exclusive,
+        releaseDate: new Date(2017, 12, 18)
+    },
+    {
+        champion: Champions.Zhin,
+        name: "Demon Slayer",
+        type: SkinType.other,
+        rarity: Rarity.epic,
+        availability: Availability.exclusive,
+        releaseDate: new Date(2018, 3, 28)
+    },
+    {
+        champion: Champions.Zhin,
+        name: "Conqueror",
+        type: SkinType.other,
+        rarity: Rarity.epic,
+        availability: Availability.limited,
+        releaseDate: new Date(2017, 9, 7)
+    },
+    {
+        champion: Champions.Zhin,
+        name: "Omega",
+        type: SkinType.other,
+        rarity: Rarity.epic,
+        availability: Availability.exclusive,
+        releaseDate: new Date(2019, 3, 27)
+    },
+    {
+        champion: Champions.Zhin,
+        name: "Underkeeper",
+        type: SkinType.other,
+        rarity: Rarity.epic,
+        availability: Availability.exclusive,
+        releaseDate: new Date(2020, 10, 28)
+    },
+    {
+        champion: Champions.Zhin,
+        name: "Forest Stalker",
+        type: SkinType.other,
+        rarity: Rarity.epic,
+        availability: Availability.limited,
+        releaseDate: new Date(2020, 10, 28)
+    },
+    {
+        champion: Champions.Zhin,
+        name: "Kazu",
+        type: SkinType.other,
+        rarity: Rarity.legendary,
+        availability: Availability.exclusive,
+        releaseDate: new Date(2021, 7, 21)
+    },
+    {
+        champion: Champions.Zhin,
+        name: "Mei",
+        type: SkinType.other,
+        rarity: Rarity.epic,
+        availability: Availability.exclusive,
+        releaseDate: new Date(2022, 8, 17)
+    },
+    {
+        champion: Champions.Zhin,
+        name: "Nova Mei",
+        type: SkinType.other,
+        rarity: Rarity.epic,
+        availability: Availability.exclusive,
+        releaseDate: new Date(2022, 8, 17)
+    }
 ]
