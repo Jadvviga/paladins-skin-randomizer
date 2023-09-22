@@ -1,4 +1,4 @@
-enum Champions {
+export enum Champions {
     Androxus = "Androxus",
     Ash = "Ash",
     Atlas = "Atlas",
@@ -60,7 +60,7 @@ enum Champions {
     Zhin = "Zhin"
 }
 
-enum SkinType {
+export enum SkinType {
     default = "default",
     recolor = "recolor", //includes recolors for old models
     special = "sepecial", //exlusive ones, like XBox Andro or TF2 Barik, that are not available to buy but require something to do
@@ -71,7 +71,7 @@ enum SkinType {
     other = "other"
 }
 
-enum Availability {
+export enum Availability {
     standard = "standard",
     mastery = "mastery",
     exclusive = "exclusive",
@@ -79,7 +79,7 @@ enum Availability {
     limited = "limited"
 }
 
-enum Rarity {
+export enum Rarity {
     common = "common",
     uncommon = "uncommon",
     rare = "rare",
@@ -87,7 +87,7 @@ enum Rarity {
     legendary = "legendary"
 }
 
-type Skin = {
+export type Skin = {
     name: string;
     champion: Champions;
     fileName?: string;
@@ -97,7 +97,7 @@ type Skin = {
     rarity: Rarity
 }
 
-const skins: Array<Skin> = [
+export const skins: Array<Skin> = [
     {
         champion: Champions.Androxus,
         name: "Default",

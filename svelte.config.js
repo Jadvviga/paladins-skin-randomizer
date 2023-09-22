@@ -4,6 +4,7 @@ import { vitePreprocess } from '@sveltejs/kit/vite';
 
 
 const dev = "production" === "development";
+export const url = dev ? "" : "/paladins-skin-randomizer"
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -18,8 +19,7 @@ const config = {
             assets: "docs"
         }),
         paths: {
-            // change below to your repo name
-            base: dev ? "" : "/paladins-skin-randomizer",
+            base: url,
         }
 	}
 };

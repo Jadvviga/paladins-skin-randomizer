@@ -1,2 +1,12 @@
 <h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<h2>skins count: {skins.length}</h2>
+{#each skins as skin}
+    <span>{skin.champion} - {skin.name}</span>
+{/each}
+
+
+<script lang="ts">
+    import { skins } from "../data/skinsData";
+
+
+</script>
