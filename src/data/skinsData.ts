@@ -267,19 +267,11 @@ export const skins: Array<Skin> = [
         releaseDate: new Date(2019, 5, 22)
     },
     {
-        champion: Champions.Androxus,  //CHECK
-        name: "Grave Danger",
+        champion: Champions.Androxus,
+        name: "Condemned Celebrant",
         type: SkinType.other,
         rarity: Rarity.epic,
-        availability: Availability.exclusive,
-        releaseDate: new Date(2022, 10, 12)
-    },
-    {
-        champion: Champions.Androxus,  //CHECK
-        name: "Anniversary",
-        type: SkinType.other,
-        rarity: Rarity.epic,
-        availability: Availability.exclusive
+        availability: Availability.unlimited
     },
     {
         champion: Champions.Ash,
@@ -986,14 +978,14 @@ export const skins: Array<Skin> = [
         availability: Availability.exclusive
     },
     {
-        champion: Champions.Corvus, // CHECK
+        champion: Champions.Corvus,
         name: "Crimson Crow",
         type: SkinType.other,
         rarity: Rarity.epic,
         availability: Availability.exclusive
     },
     {
-        champion: Champions.Corvus, // CHECK
+        champion: Champions.Corvus,
         name: "Eternal Waltz",
         type: SkinType.other,
         rarity: Rarity.epic,
@@ -1455,7 +1447,7 @@ export const skins: Array<Skin> = [
     },
     {
         champion: Champions.Grohk,
-        name: "Grohk Lobster",
+        name: "Lobster",
         type: SkinType.hat,
         rarity: Rarity.rare,
         availability: Availability.exclusive
@@ -1533,7 +1525,7 @@ export const skins: Array<Skin> = [
     },
     {
         champion: Champions.Grover,
-        name: "Frosty Doom Shroom",
+        name: "Doom Shroom",
         type: SkinType.other,
         rarity: Rarity.epic,
         availability: Availability.exclusive
@@ -2120,8 +2112,8 @@ export const skins: Array<Skin> = [
         availability: Availability.exclusive
     },
     {
-        champion: Champions.Kinessa, //CHECK
-        name: "Dunestrider 2",
+        champion: Champions.Kinessa,
+        name: "Sandstrider",
         type: SkinType.other,
         rarity: Rarity.epic,
         availability: Availability.exclusive
@@ -2592,8 +2584,8 @@ export const skins: Array<Skin> = [
         availability: Availability.exclusive
     },
     {
-        champion: Champions.Maeve, //CHECK
-        name: "Anniversary",
+        champion: Champions.Maeve,
+        name: "Celebrant Cat Burglar",
         type: SkinType.other,
         rarity: Rarity.epic,
         availability: Availability.exclusive
@@ -2685,6 +2677,20 @@ export const skins: Array<Skin> = [
     {
         champion: Champions.Makoa,
         name: "Omega",
+        type: SkinType.other,
+        rarity: Rarity.epic,
+        availability: Availability.exclusive
+    },
+    {
+        champion: Champions.Makoa,
+        name: "Crocfather",
+        type: SkinType.other,
+        rarity: Rarity.epic,
+        availability: Availability.exclusive
+    },
+    {
+        champion: Champions.Makoa,
+        name: "Cold Blooded",
         type: SkinType.other,
         rarity: Rarity.epic,
         availability: Availability.exclusive
@@ -2914,18 +2920,18 @@ export const skins: Array<Skin> = [
         availability: Availability.mastery
     },
     {
-        champion: Champions.Omen, //CHECK
-        name: "Recolor1",
+        champion: Champions.Omen,
+        name: "Sonej",
         type: SkinType.recolor,
         rarity: Rarity.common,
-        availability: Availability.standard
+        availability: Availability.exclusive
     },
     {
         champion: Champions.Omen,
-        name: "Recolor2",
+        name: "Carrion",
         type: SkinType.recolor,
         rarity: Rarity.common,
-        availability: Availability.standard
+        availability: Availability.exclusive
     },
     {
         champion: Champions.Pip,
@@ -2996,13 +3002,6 @@ export const skins: Array<Skin> = [
         type: SkinType.other,
         rarity: Rarity.rare,
         availability: Availability.exclusive
-    },
-    {
-        champion: Champions.Pip,
-        name: "Invader",
-        type: SkinType.other,
-        rarity: Rarity.epic,
-        availability: Availability.standard
     },
     {
         champion: Champions.Pip,
@@ -3370,6 +3369,13 @@ export const skins: Array<Skin> = [
     },
     {
         champion: Champions.Seris,
+        name: "Expo 2018",
+        type: SkinType.recolor,
+        rarity: Rarity.epic,
+        availability: Availability.limited
+    },
+    {
+        champion: Champions.Seris,
         name: "Remix",
         type: SkinType.other,
         rarity: Rarity.legendary,
@@ -3404,8 +3410,8 @@ export const skins: Array<Skin> = [
         availability: Availability.exclusive
     },
     {
-        champion: Champions.Seris, //CHECK
-        name: "Anniversary",
+        champion: Champions.Seris,
+        name: "Celebrant Soothsayer",
         type: SkinType.other,
         rarity: Rarity.epic,
         availability: Availability.exclusive
@@ -4014,7 +4020,7 @@ export const skins: Array<Skin> = [
     },
     {
         champion: Champions.Tyra,
-        name: "Red Drakefire",
+        name: "Drakefire",
         type: SkinType.other,
         rarity: Rarity.epic,
         availability: Availability.exclusive
@@ -4090,15 +4096,15 @@ export const skins: Array<Skin> = [
         availability: Availability.exclusive
     },
     {
-        champion: Champions.Tyra, //CHECK
-        name: "Beach1",
+        champion: Champions.Tyra,
+        name: "Daisy Dukes",
         type: SkinType.other,
         rarity: Rarity.epic,
         availability: Availability.exclusive
     },
     {
-        champion: Champions.Tyra, //CHECK
-        name: "Beach2",
+        champion: Champions.Tyra,
+        name: "Get Served",
         type: SkinType.other,
         rarity: Rarity.epic,
         availability: Availability.exclusive
@@ -4172,13 +4178,6 @@ export const skins: Array<Skin> = [
         type: SkinType.golden,
         rarity: Rarity.legendary,
         availability: Availability.mastery
-    },
-    {
-        champion: Champions.Vatu,
-        name: "Sorrow",
-        type: SkinType.recolor,
-        rarity: Rarity.uncommon,
-        availability: Availability.exclusive
     },
     {
         champion: Champions.Vatu,
@@ -4385,8 +4384,8 @@ export const skins: Array<Skin> = [
         releaseDate: new Date(2022, 2, 11)
     },
     {
-        champion: Champions.Viktor, //CHECK
-        name: "Anniverssary",
+        champion: Champions.Viktor,
+        name: "Celebrant Soldier",
         type: SkinType.other,
         rarity: Rarity.epic,
         availability: Availability.exclusive,
@@ -4545,14 +4544,14 @@ export const skins: Array<Skin> = [
         releaseDate: new Date(2022, 6, 29)
     },
     {
-        champion: Champions.Vora, // CHECK
+        champion: Champions.Vora,
         name: "Danse Macabre",
         type: SkinType.other,
         rarity: Rarity.epic,
         availability: Availability.exclusive
     },
     {
-        champion: Champions.Vora, // CHECK
+        champion: Champions.Vora,
         name: "Patchwork Assassin",
         type: SkinType.other,
         rarity: Rarity.epic,
@@ -4871,8 +4870,8 @@ export const skins: Array<Skin> = [
         releaseDate: new Date(2022, 1, 26)
     },
     {
-        champion: Champions.Ying, //CHECK
-        name: "Anniversarry",
+        champion: Champions.Ying,
+        name: "Celebrant Spellcaster",
         type: SkinType.other,
         rarity: Rarity.epic,
         availability: Availability.exclusive,
