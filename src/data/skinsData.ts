@@ -94,10 +94,14 @@ export type Skin = {
     releaseDate?: Date;
     type: SkinType;
     availability: Availability,
-    rarity: Rarity
+    rarity: Rarity,
+    sound?: string;
 }
 
-export const skins: Array<Skin> = [
+// skins imgs are 650x650
+// icons are 256x256
+
+export let skins: Array<Skin> = [
     {
         champion: Champions.Androxus,
         name: "Default",
@@ -4974,3 +4978,21 @@ export const skins: Array<Skin> = [
         releaseDate: new Date(2022, 8, 17)
     }
 ]
+
+function getFileName(skin: Skin) {
+    const champ = String(skin.champion).toLowerCase().replaceAll(' ', '_');
+    const name = String(skin.name).toLowerCase().replaceAll(' ', '_');
+    return champ.concat('_', name)
+}
+
+function getIconName(champion: string) {
+    const name = String(champion).toLowerCase().replaceAll(' ', '_');
+    return name.concat('_', 'icon');
+}
+
+export function assignFileNames() {
+    skins.forEach(skin => {
+        skin.fileName = `${getFileName(skin)}.png`;
+     })
+   
+}

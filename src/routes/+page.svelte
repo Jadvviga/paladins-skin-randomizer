@@ -1,6 +1,21 @@
 <h1>Welcome to Paladins skin randomizer</h1>
-<div>
-    <button> GET RANDOM SKIN</button>
+<div id="rand_container">
+    {#if randSkin}
+        <h3>{randSkin.name} {randSkin.champion}</h3>
+    {:else}
+        <h3>Click below to get random skin!</h3>
+    {/if}
+    <button
+        id="rand_button"
+        on:click={getRandomSkin}>
+        
+        {#if randSkin}
+            <img src="src/data/skins_img/{String(randSkin.champion).toLowerCase().replaceAll(' ', '_')}/{randSkin.fileName}" alt="Randomized champion">
+        {:else}
+            gimmie random skin!
+        {/if}
+    </button>
+    
 </div>
 
 
@@ -9,36 +24,36 @@
 
 <script lang="ts">
 	import { onMount } from "svelte";
-    import { Champions, skins } from "../data/skinsData";
+    import { Champions, assignFileNames, skins } from "../data/skinsData";
     import type { Skin } from "../data/skinsData";
 
-    function getFileName(skin: Skin) {
-        const champ = String(skin.champion).toLowerCase().replaceAll(' ', '_');
-        const name = String(skin.name).toLowerCase().replaceAll(' ', '_');
-        return champ.concat('_', name)
+    const  SKINS_COUNT = skins.length;
+    let randSkin: Skin;
+
+   
+
+    function getRandomSkin() {
+        const rand = Math.floor(Math.random() * SKINS_COUNT);
+        randSkin = skins[rand];
     }
-
-    function getIconName(champion: string) {
-        const name = String(champion).toLowerCase().replaceAll(' ', '_');
-        return name.concat('_', 'icon');
-    }
-
-
 
     onMount(() => {
-        let count = 0;
-        for (const champ in Champions) {
-            console.log(getIconName(champ))
-            count++
-            // if (skin.champion === Champions.Androxus) {
-            //     count++;
-            //     console.log(getFileName(skin))
-            // }
-            
-            
-        }
-        console.log(count)
+        assignFileNames();
     })
 
 
+
 </script>
+
+<style>
+	#rand_container {
+		text-align: center;
+	}
+
+    #rand_button {
+        width: 650px;
+        height: 650px;
+        font-size: 5em;
+    }
+
+</style>
