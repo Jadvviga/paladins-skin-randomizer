@@ -1,8 +1,10 @@
-<h1>Welcome to SvelteKit</h1>
-<h2>skins count: {skins.length}</h2>
-{#each skins as skin}
-    <span>{skin.champion} - {skin.name}</span>
-{/each}
+<h1>Welcome to Paladins skin randomizer</h1>
+<div>
+    <button> GET RANDOM SKIN</button>
+</div>
+
+
+
 
 
 <script lang="ts">
@@ -26,7 +28,6 @@
     onMount(() => {
         let count = 0;
         for (const champ in Champions) {
-            //CHAMPION ICONS SHOULD ALL BE 256x256
             console.log(getIconName(champ))
             count++
             // if (skin.champion === Champions.Androxus) {
