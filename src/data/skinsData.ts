@@ -108,7 +108,7 @@ export let skins: Array<Skin> = [
         type: SkinType.default,
         rarity: Rarity.common,
         availability: Availability.standard,
-        releaseDate: new Date(2016, 3, 11)
+        releaseDate: new Date(2016, 3, 11),
     },
     {
         champion: Champions.Androxus,
@@ -116,7 +116,7 @@ export let skins: Array<Skin> = [
         type: SkinType.obsidian,
         rarity: Rarity.rare,
         availability: Availability.mastery,
-        releaseDate: new Date(2017, 6, 28)
+        releaseDate: new Date(2017, 6, 28),
     },
     {
         champion: Champions.Androxus,
@@ -124,7 +124,7 @@ export let skins: Array<Skin> = [
         type: SkinType.cosmic,
         rarity: Rarity.epic,
         availability: Availability.mastery,
-        releaseDate: new Date(2017, 6, 28)
+        releaseDate: new Date(2017, 6, 28),
     },
     {
         champion: Champions.Androxus,
@@ -4979,20 +4979,18 @@ export let skins: Array<Skin> = [
     }
 ]
 
-function getFileName(skin: Skin) {
-    const champ = String(skin.champion).toLowerCase().replaceAll(' ', '_');
+export function getChampForFile(champion: Champions): string {
+    return String(champion).toLowerCase().replaceAll(' ', '_');
+}
+
+export function getFileName(skin: Skin): string {
+    const champ = getChampForFile(skin.champion)
     const name = String(skin.name).toLowerCase().replaceAll(' ', '_');
     return champ.concat('_', name)
 }
 
-function getIconName(champion: string) {
-    const name = String(champion).toLowerCase().replaceAll(' ', '_');
+export function getIconName(champion: Champions): string {
+    const name = getChampForFile(champion);
     return name.concat('_', 'icon');
 }
 
-export function assignFileNames() {
-    skins.forEach(skin => {
-        skin.fileName = `${getFileName(skin)}.png`;
-     })
-   
-}
