@@ -39,7 +39,7 @@
     function getFilePath(skin: Skin): string {
         const fileName = getFileName(skin);
         const champ = getChampForFile(skin.champion);
-        return `${$page.url}/src/data/skins_img/${champ}/${fileName}.png`;
+        return `${$page.url}/img/skins_img/${champ}/${fileName}.png`;
     }
 
 
