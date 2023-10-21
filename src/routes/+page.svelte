@@ -5,22 +5,17 @@
     {:else}
         <h3>{text}</h3>
     {/if}
-    {#if showRandomGif}
-        <img
-            class="rand_button rand_img"
-            style="--background-col:{randBtnBorderColor}"
-            src={`${$page.url}/img/randomize${randomizeImgId}.gif`}
-            alt="Randomized champion">
-    {:else}
-        <img
-            class="rand_button"
-            on:click={randomizeSkin}
-            src={randSkin ? getFilePath(randSkin) : RAND_BTN_PATH}
-            alt="Randomized champion">
-    {/if}
-    
+    <img
+        class="rand_button {showRandomGif? 'hidden': ''}"
+        on:click={randomizeSkin}
+        src={randSkin ? getFilePath(randSkin) : RAND_BTN_PATH}
+        alt="Randomized champion">
+    <img
+        class="rand_button rand_img {showRandomGif? '': 'hidden'}"
+        style="--background-col:{randBtnBorderColor}"
+        src={`${$page.url}/img/randomize${randomizeImgId}.gif`}
+        alt="Randomized champion">
 
-    
 </div>
 
 
@@ -128,6 +123,12 @@
 
     .rand_img {
         background-color: var(--background-col);
+        position: absolute;
+        top: 174px
+    }
+
+    .hidden {
+        visibility: hidden;
     }
 
 
