@@ -5,12 +5,21 @@
     {:else}
         <h3>{text}</h3>
     {/if}
-    <img
-        class="rand_button rand_img"
-        style="--background-col:{randBtnBorderColor}"
-        on:click={randomizeSkin}
-        src={randSkin ? getFilePath(randSkin) : RAND_BTN_PATH}
-        alt="Randomized champion">
+    {#if showRandomGif}
+        <img
+            class="rand_button rand_img"
+            style="--background-col:{randBtnBorderColor}"
+            src={`${$page.url}/img/randomize${randomizeImgId}.gif`}
+            alt="Randomized champion">
+    {:else}
+        <img
+            class="rand_button"
+            on:click={randomizeSkin}
+            src={randSkin ? getFilePath(randSkin) : RAND_BTN_PATH}
+            alt="Randomized champion">
+    {/if}
+    
+
     
 </div>
 
@@ -25,48 +34,54 @@
     const SKINS_COUNT = skins.length;
     const BORDER_DEFAULT = "black";
     const TEXT_DEFAULT = "Click below to get random skin!";
+    const RAND_BTN_PATH = `${$page.url}/img/random_btn.png`;
 
     let randSkin: Skin;
     let randNumber: number;
-    let randBtnBorderColor = BORDER_DEFAULT;
+    let randBtnBorderColor = "orange";
     let colorCounter = 0;
     let borderColorInterval = null;
     let stopInterval = null;
     let text = TEXT_DEFAULT;
+    let showRandomGif = false;
+    let randomizeImgId = 0;
 
-    const RAND_BTN_PATH = `${$page.url}/img/random_btn.png`
 
     function setRandomSkin() {
         randNumber = Math.floor(Math.random() * SKINS_COUNT);
         while (skins[randNumber] === randSkin) {
             randNumber = Math.floor(Math.random() * SKINS_COUNT);
         }
+        randSkin = skins[randNumber];
         
     }
     
-    function setBorderAndImg() {
+    function setBorderColor() {
         randBtnBorderColor = COLORS[colorCounter];
-        console.log(randBtnBorderColor)
         colorCounter++;
         if (colorCounter >= COLORS.length) {
             colorCounter = 0;
         }
-
-        const r = Math.floor(Math.random() * SKINS_COUNT);
-        randSkin = skins[r];
     }
 
     function stopRandomizing() {
         randBtnBorderColor = BORDER_DEFAULT;
-        randSkin = skins[randNumber];
+        showRandomGif = false;
+        randomizeImgId = Math.floor(Math.random() * 3);
         window.clearInterval(borderColorInterval);
         window.clearInterval(stopInterval)
+        borderColorInterval = null;
+        stopInterval = null;
     }
 
     function randomizeSkin() {
+        if (borderColorInterval) {
+            return;
+        }
         setRandomSkin();
-        text = "Randomizing..."
-        borderColorInterval = window.setInterval(setBorderAndImg, 100);
+        text = "Randomizing...";
+        showRandomGif = true;
+        borderColorInterval = window.setInterval(setBorderColor, 100);
         stopInterval = window.setInterval(stopRandomizing, 3000)
     }
 
@@ -94,10 +109,10 @@
         font-size: 5em;
         padding: 0;
         margin: 0;
-        width: 510px;
-        height: 510px;
+        width: 500px;
+        height: 500px;
         border-radius: 20px;
-        background-color: var(--background-col);
+        background-color: black;
         display: block;
         text-align: center;
         padding: 5px;
@@ -109,6 +124,10 @@
     .rand_button:active {
        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
        
+    }
+
+    .rand_img {
+        background-color: var(--background-col);
     }
 
 
