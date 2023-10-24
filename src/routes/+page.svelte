@@ -1,6 +1,6 @@
 <div id="wrapper">
     <div class="container">
-        fillter will go here (test)
+        <FilterSkins/>
     </div>
     <div class=" container rand_container">
         {#if showText}
@@ -32,6 +32,7 @@
     import { Champions, skins, getFileName, getIconName, getChampForFile } from "../data/skinsData";
     import type { Skin } from "../data/skinsData";
     import { page } from '$app/stores';
+    import FilterSkins from "../components/FilterSkins.svelte";
 
     const COLORS = ["red", "orange", "yellow", "yellowgreen", "green", "aqua", "dodgerblue", "blue", "indigo", "darkmagenta", "deeppink"]
     const SKINS_COUNT = skins.length;
@@ -150,8 +151,6 @@
 
     .rand_img {
         background-color: var(--background-col);
-        /* position: absolute;
-        top: 174px */
     }
 
     .hidden {
