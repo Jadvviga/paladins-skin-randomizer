@@ -3,10 +3,10 @@
         fillter will go here
     </div>
     <div class=" container rand_container">
-        {#if randSkin && randBtnBorderColor === BORDER_DEFAULT}
-        <h3>{randSkin.name} {randSkin.champion}</h3>
-        {:else}
+        {#if showText}
             <h3>{text}</h3>
+        {:else}
+            <h3>{randSkin.name} {randSkin.champion}</h3>
         {/if}
         <img
             class="rand_button {showRandomGif? 'hidden': ''}"
@@ -48,6 +48,7 @@
     let text = TEXT_DEFAULT;
     let showRandomGif = false;
     let randomizeImgId = 0;
+    let showText = true;
 
 
     function setRandomSkin() {
@@ -75,14 +76,16 @@
         window.clearInterval(stopInterval)
         borderColorInterval = null;
         stopInterval = null;
+        showText = false;
     }
 
     function randomizeSkin() {
         if (borderColorInterval) {
             return;
         }
-        setRandomSkin();
+        showText = true;
         text = "Randomizing...";
+        setRandomSkin();
         showRandomGif = true;
         borderColorInterval = window.setInterval(setBorderColor, 100);
         stopInterval = window.setInterval(stopRandomizing, 3000)
@@ -147,12 +150,12 @@
 
     .rand_img {
         background-color: var(--background-col);
-        position: absolute;
-        top: 174px
+        /* position: absolute;
+        top: 174px */
     }
 
     .hidden {
-        visibility: hidden;
+        display: none;
     }
 
 
