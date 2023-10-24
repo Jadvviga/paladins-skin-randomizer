@@ -6,47 +6,45 @@
 <header>
 
 	<nav>
-		<svg viewBox="0 0 2 3" aria-hidden="true">
-			<path d="M0,0 L1,2 C1.5,3 1.5,3 2,3 L2,0 Z" />
-		</svg>
 		<ul>
 			<li aria-current={$page.url.pathname === '/' ? 'page' : undefined}>
 				<a href="{base}/">Randomizer</a>
 			</li>
-			<li aria-current={$page.url.pathname === '/stats' ? 'page' : undefined}>
-				<a href="{base}/">Stats</a>
+			<li aria-current={$page.url.pathname === '/statistics' ? 'page' : undefined}>
+				<a href="{base}/statistics">statistics</a>
 			</li>
 			<li aria-current={$page.url.pathname === '/gallery' ? 'page' : undefined}>
 				<a href="{base}/gallery">Gallery</a>
 			</li>
 		</ul>
-		<svg viewBox="0 0 2 3" aria-hidden="true">
-			<path d="M0,0 L0,3 C0.5,3 0.5,3 1,2 L2,0 Z" />
-		</svg>
 	</nav>
+	<h4>
+		Paladins skin randomizer
+	</h4>
+	<span style="flex: 1;"/>
 </header>
 
 <style>
 	header {
 		display: flex;
 		justify-content: center;
+		background-color: rgba(255, 255, 255, 0.7);
 	}
 
 	nav {
 		display: flex;
-		justify-content: center;
+		flex: 1;
+		justify-content: start;
 		align-items: center;
-		--background: rgba(255, 255, 255, 0.7);
 	}
 
-	svg {
-		width: 2em;
-		height: 3em;
-		display: block;
-	}
-
-	path {
-		fill: var(--background);
+	h4 {
+		align-items: center;
+		text-transform: uppercase;
+		font-weight: 900;
+		font-size: 1.6rem;
+		padding: 0.5em 0;
+		margin: auto;
 	}
 
 	ul {
@@ -65,6 +63,7 @@
 	li {
 		position: relative;
 		height: 100%;
+		padding: 0 1.5em
 	}
 
 	li[aria-current='page']::before {

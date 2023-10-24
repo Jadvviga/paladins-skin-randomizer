@@ -1,20 +1,28 @@
-<h2>Welcome to Paladins skin randomizer</h2>
-<div id="rand_container">
-    {#if randSkin && randBtnBorderColor === BORDER_DEFAULT}
+<div id="wrapper">
+    <div class="container">
+        fillter will go here
+    </div>
+    <div class=" container rand_container">
+        {#if randSkin && randBtnBorderColor === BORDER_DEFAULT}
         <h3>{randSkin.name} {randSkin.champion}</h3>
-    {:else}
-        <h3>{text}</h3>
-    {/if}
-    <img
-        class="rand_button {showRandomGif? 'hidden': ''}"
-        on:click={randomizeSkin}
-        src={randSkin ? getFilePath(randSkin) : RAND_BTN_PATH}
-        alt="Randomized champion">
-    <img
-        class="rand_button rand_img {showRandomGif? '': 'hidden'}"
-        style="--background-col:{randBtnBorderColor}"
-        src={`${$page.url}/img/randomize${randomizeImgId}.gif`}
-        alt="Randomized champion">
+        {:else}
+            <h3>{text}</h3>
+        {/if}
+        <img
+            class="rand_button {showRandomGif? 'hidden': ''}"
+            on:click={randomizeSkin}
+            src={randSkin ? getFilePath(randSkin) : RAND_BTN_PATH}
+            alt="Randomized champion">
+        <img
+            class="rand_button rand_img {showRandomGif? '': 'hidden'}"
+            style="--background-col:{randBtnBorderColor}"
+            src={`${$page.url}/img/randomize${randomizeImgId}.gif`}
+            alt="Randomized champion">
+    </div>
+    <div class="container">
+        champion filters will go here
+    </div>
+    
 
 </div>
 
@@ -93,11 +101,27 @@
 </script>
 
 <style>
-	#rand_container {
+
+    #wrapper {
+        margin-top: 2em;
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        justify-content: center;
+    }
+	.rand_container {
 		display: flex;
         flex-direction: column;
         align-items: center;
 	}
+    .container:not(:nth-child(2)) {
+        flex-basis: 0%;
+        flex-grow: 1;
+        max-width: 30%;
+        text-align: center;
+    }
+    
+
 
     .rand_button {
         cursor: pointer;
