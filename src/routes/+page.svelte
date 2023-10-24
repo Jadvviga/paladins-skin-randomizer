@@ -1,6 +1,6 @@
 <div id="wrapper">
     <div class="container">
-        fillter will go here
+        fillter will go here (test)
     </div>
     <div class=" container rand_container">
         {#if showText}
@@ -83,12 +83,12 @@
         if (borderColorInterval) {
             return;
         }
-        showText = true;
         text = "Randomizing...";
-        setRandomSkin();
+        showText = true;
         showRandomGif = true;
         borderColorInterval = window.setInterval(setBorderColor, 100);
-        stopInterval = window.setInterval(stopRandomizing, 3000)
+        stopInterval = window.setInterval(stopRandomizing, 3000);
+        setRandomSkin();
     }
 
     function getFilePath(skin: Skin): string {
