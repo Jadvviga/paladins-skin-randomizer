@@ -63,7 +63,7 @@ export enum Champions {
 export enum SkinType {
     default = "default",
     recolor = "recolor", //includes recolors for old models
-    special = "sepecial", //exlusive ones, like XBox Andro or TF2 Barik, that are not available to buy but require something to do
+    special = "special", //exlusive ones, like XBox Andro or TF2 Barik, that are not available to buy but require something to do
     hat = "hat", //the skins that are just base skins with diffrent hat
     cosmic = "cosmic",
     obsidian = "obsidian",

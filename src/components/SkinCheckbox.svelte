@@ -1,5 +1,11 @@
 <div class="checkbox_container">
-    <input id={label} type="checkbox" class="checkbox">
+    <input
+        id={label}
+        type="checkbox"
+        class="checkbox"
+        bind:checked={checked}
+        bind:indeterminate={indeterminate}
+        on:change={toggleCheckbox}>
     <label for={label}> {label}</label>
     {#if tooltip}
         <div class="tooltip">
@@ -12,11 +18,10 @@
 
 
 <script lang="ts">
-	import { onMount } from "svelte";
+	import { createEventDispatcher, onMount } from "svelte";
     import { Champions, skins, getFileName, getIconName, getChampForFile } from "../data/skinsData";
     import type { Skin } from "../data/skinsData";
     import { page } from '$app/stores';
-    import SkinCheckbox from "./SkinCheckbox.svelte";
 
     const COLORS = ["red", "orange", "yellow", "yellowgreen", "green", "aqua", "dodgerblue", "blue", "indigo", "darkmagenta", "deeppink"]
     const SKINS_COUNT = skins.length;
@@ -27,6 +32,16 @@
 
     export let tooltip = "";
     export let label = "Checkbox"
+    export let checked = true;
+    export let indeterminate = false;
+
+    const dispatcher = createEventDispatcher();
+
+    function toggleCheckbox() {
+        console.log(checked)
+        dispatcher("toggle", {checked, label})
+    }
+
 
 
 
@@ -41,18 +56,30 @@
         align-items: start;
         flex-direction: row;
         justify-content: center;
-        gap: 0.5em
+        gap: 0.5em;
+        margin: 10px;
     }
 
     label {
         text-align: left;
     }
+
+    /* Note to self: NEVER EVER CREATE CUSTOM CHECKBOX */
     input[type="checkbox"]:checked::before {
         content: "";
         display: block;
         width: 16px;
         height: 16px;
         clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+        background-color: white;
+    }
+
+    input[type="checkbox"]:indeterminate::before {
+        content: "";
+        display: block;
+        width: 16px;
+        height: 16px;
+        clip-path: polygon(10% 30%, 90% 30%, 90% 70%, 10% 70%);
         background-color: white;
     }
 
@@ -66,7 +93,6 @@
     }
 
     
-
     input[type="checkbox"] {
         appearance: none;
         cursor: pointer;
@@ -102,11 +128,11 @@
     /* Tooltip text */
     .tooltip .tooltiptext {
         visibility: hidden;
-        width: 120px;
+        width: 150px;
         background-color: #555;
         color: #fff;
-        text-align: center;
-        padding: 5px 0;
+        text-align:justify;
+        padding: 5px;
         border-radius: 6px;
 
         /* Position the tooltip text */

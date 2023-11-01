@@ -1,6 +1,7 @@
 <div id="wrapper">
     <div class="container">
-        <FilterSkins/>
+        <FilterSkins
+            bind:selectedFilters={selectedSkinFilters}/>
     </div>
     <div class=" container rand_container">
         {#if showText}
@@ -34,8 +35,7 @@
     import { page } from '$app/stores';
     import FilterSkins from "../components/FilterSkins.svelte";
 
-    const COLORS = ["red", "orange", "yellow", "yellowgreen", "green", "aqua", "dodgerblue", "blue", "indigo", "darkmagenta", "deeppink"]
-    const SKINS_COUNT = skins.length;
+    const COLORS = ["red", "orange", "yellow", "yellowgreen", "green", "aqua", "dodgerblue", "blue", "indigo", "darkmagenta", "deeppink"];
     const BORDER_DEFAULT = "black";
     const TEXT_DEFAULT = "Click below to get random skin!";
     const RAND_BTN_PATH = `${$page.url}/img/random_btn.png`;
@@ -51,8 +51,34 @@
     let randomizeImgId = 0;
     let showText = true;
 
+    let selectedSkinFilters: Array<any>;
+
+    $: filteredSkins = getFilteredSkins(selectedSkinFilters);
+    $: {console.log(filteredSkins)}
+
+
+    function getFilteredSkins(skinFilters: Array<any>): Array<Skin> {
+        if (!skinFilters) {
+            return [];
+        }
+
+        //TODO
+        const ifFilteredOut = (skin: Skin) => {
+            return skinFilters.some(skinFilter => {
+                return skinFilter.filter === skin.availability
+                    || skinFilter.filter === skin.type;
+            })
+        }
+        const skinsCopy = [...skins]
+
+        return skinsCopy.filter(skin => !ifFilteredOut(skin))
+    }
+
+
 
     function setRandomSkin() {
+        const SKINS_COUNT = skins.length;
+
         randNumber = Math.floor(Math.random() * SKINS_COUNT);
         while (skins[randNumber] === randSkin) {
             randNumber = Math.floor(Math.random() * SKINS_COUNT);
