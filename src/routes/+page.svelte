@@ -50,6 +50,7 @@
     let showRandomGif = false;
     let randomizeImgId = 0;
     let showText = true;
+    //test
 
     let selectedSkinFilters: Array<any>;
 
